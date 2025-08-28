@@ -1,0 +1,31 @@
+{
+  "name": "blog-app",
+  "version": "1.0.0",
+  "description": "Full-stack blogging application with Node.js, Express, MongoDB, and React",
+  "main": "server/app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && nodemon app.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "seed": "cd server && node scripts/seed.js",
+    "reset": "cd server && node scripts/reset.js",
+    "start": "cd server && node app.js"
+  },
+  "keywords": [
+    "blog",
+    "nodejs",
+    "express",
+    "mongodb",
+    "react",
+    "jwt",
+    "socket.io"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2"
+  }
+}
