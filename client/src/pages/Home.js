@@ -87,48 +87,59 @@ const Home = () => {
         <div style={{
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
           color: 'white',
-          borderRadius: '16px',
-          padding: '60px 40px',
+          borderRadius: '24px',
+          padding: '80px 48px',
           textAlign: 'center',
-          marginBottom: '48px',
+          marginBottom: '64px',
           position: 'relative',
-          overflow: 'hidden'
+          overflow: 'hidden',
+          boxShadow: '0 20px 40px rgba(102, 126, 234, 0.3)'
         }}>
           <div style={{ position: 'relative', zIndex: 2 }}>
             <h1 style={{ 
-              fontSize: '48px', 
-              fontWeight: '700', 
-              marginBottom: '20px',
-              lineHeight: '1.2'
+              fontSize: '56px', 
+              fontWeight: '800', 
+              marginBottom: '24px',
+              lineHeight: '1.1',
+              fontFamily: 'Playfair Display, serif',
+              letterSpacing: '-0.02em'
             }}>
-              Share Your Story
+              Craft Your Story
             </h1>
             <p style={{ 
-              fontSize: '20px', 
-              marginBottom: '32px', 
+              fontSize: '22px', 
+              marginBottom: '40px', 
               opacity: 0.9,
-              maxWidth: '600px',
-              margin: '0 auto 32px'
+              maxWidth: '700px',
+              margin: '0 auto 40px',
+              lineHeight: '1.6'
             }}>
-              Join thousands of writers sharing their thoughts, experiences, and expertise 
-              with a global community of readers.
+              Join a vibrant community of storytellers, thought leaders, and creatives 
+              sharing their unique perspectives with the world.
             </p>
-            <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/register" className="btn" style={{ 
                 background: 'white', 
                 color: '#667eea', 
                 textDecoration: 'none',
                 fontSize: '16px',
-                fontWeight: '600'
+                fontWeight: '600',
+                padding: '16px 32px',
+                borderRadius: '12px',
+                boxShadow: '0 4px 15px rgba(255, 255, 255, 0.2)'
               }}>
-                Start Writing Today
+                ✨ Start Your Journey
               </Link>
               <Link to="/search" className="btn btn-outline" style={{ 
                 color: 'white', 
                 borderColor: 'white',
-                textDecoration: 'none'
+                textDecoration: 'none',
+                padding: '16px 32px',
+                borderRadius: '12px',
+                backdropFilter: 'blur(10px)',
+                background: 'rgba(255, 255, 255, 0.1)'
               }}>
-                Explore Stories
+                🔍 Discover Stories
               </Link>
             </div>
           </div>
@@ -139,16 +150,16 @@ const Home = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            opacity: 0.3
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='40' cy='40' r='6'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            opacity: 0.4
           }}></div>
         </div>
       )}
 
       <div style={{ 
         display: 'grid', 
-        gridTemplateColumns: '1fr 300px', 
-        gap: '40px',
+        gridTemplateColumns: '1fr 320px', 
+        gap: '48px',
         alignItems: 'flex-start'
       }}>
         {/* Main Content */}
@@ -158,58 +169,66 @@ const Home = () => {
             display: 'flex', 
             alignItems: 'center', 
             justifyContent: 'space-between',
-            marginBottom: '32px',
+            marginBottom: '40px',
             flexWrap: 'wrap',
-            gap: '16px'
+            gap: '20px'
           }}>
             <h2 style={{ 
-              fontSize: '28px', 
+              fontSize: '32px', 
               fontWeight: '700', 
-              color: '#212529',
+              color: '#1a202c',
+              fontFamily: 'Playfair Display, serif',
               margin: 0
             }}>
-              Latest Stories
+              Featured Stories
             </h2>
             
-            <div style={{ display: 'flex', gap: '8px' }}>
+            <div style={{ display: 'flex', gap: '12px' }}>
               <button
                 onClick={() => handleSortChange('createdAt')}
                 className={`btn btn-sm ${sortBy === 'createdAt' ? 'btn-primary' : 'btn-outline'}`}
               >
-                Latest
+                🕒 Latest
               </button>
               <button
                 onClick={() => handleSortChange('likesCount')}
                 className={`btn btn-sm ${sortBy === 'likesCount' ? 'btn-primary' : 'btn-outline'}`}
               >
-                Popular
+                ❤️ Popular
               </button>
               <button
                 onClick={() => handleSortChange('views')}
                 className={`btn btn-sm ${sortBy === 'views' ? 'btn-primary' : 'btn-outline'}`}
               >
-                Trending
+                🔥 Trending
               </button>
             </div>
           </div>
 
           {/* Posts List */}
-          <div style={{ display: 'grid', gap: '24px' }}>
+          <div style={{ display: 'grid', gap: '32px' }}>
             {posts.length === 0 ? (
               <div style={{
                 textAlign: 'center',
-                padding: '60px 20px',
-                color: '#6c757d'
+                padding: '80px 24px',
+                color: '#718096'
               }}>
-                <div style={{ fontSize: '64px', marginBottom: '20px' }}>📝</div>
-                <h3 style={{ marginBottom: '12px', color: '#495057' }}>No posts yet</h3>
-                <p>Be the first to share your story!</p>
+                <div style={{ fontSize: '80px', marginBottom: '24px' }}>📝</div>
+                <h3 style={{ 
+                  marginBottom: '16px', 
+                  color: '#4a5568',
+                  fontSize: '24px',
+                  fontFamily: 'Playfair Display, serif'
+                }}>No stories yet</h3>
+                <p style={{ fontSize: '16px', marginBottom: '24px' }}>
+                  Be the first to share your unique perspective!
+                </p>
                 {user && (
                   <Link to="/create" className="btn btn-primary" style={{ 
                     textDecoration: 'none',
-                    marginTop: '16px'
+                    padding: '16px 32px'
                   }}>
-                    Write Your First Post
+                    ✨ Create Your First Story
                   </Link>
                 )}
               </div>
@@ -228,13 +247,14 @@ const Home = () => {
                 ))}
 
                 {hasMore && (
-                  <div style={{ textAlign: 'center', marginTop: '32px' }}>
+                  <div style={{ textAlign: 'center', marginTop: '40px' }}>
                     <button
                       onClick={handleLoadMore}
                       className="btn btn-outline"
                       disabled={loading}
+                      style={{ padding: '16px 32px' }}
                     >
-                      {loading ? 'Loading...' : 'Load More Stories'}
+                      {loading ? '⏳ Loading...' : '📚 Load More Stories'}
                     </button>
                   </div>
                 )}
@@ -247,18 +267,24 @@ const Home = () => {
         <aside>
           {/* User Welcome Card */}
           {user && (
-            <div className="card" style={{ padding: '24px', marginBottom: '24px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+            <div className="card" style={{ padding: '32px', marginBottom: '32px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
                 <img
                   src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=667eea&color=fff`}
                   alt={user.username}
-                  className="avatar avatar-md"
+                  className="avatar avatar-lg"
                 />
                 <div>
-                  <h4 style={{ margin: 0, fontSize: '16px', fontWeight: '600' }}>
-                    Welcome back, {user.username}!
+                  <h4 style={{ 
+                    margin: 0, 
+                    fontSize: '18px', 
+                    fontWeight: '700',
+                    color: '#1a202c',
+                    fontFamily: 'Playfair Display, serif'
+                  }}>
+                    Welcome back, {user.username}! 👋
                   </h4>
-                  <p style={{ margin: 0, fontSize: '14px', color: '#6c757d' }}>
+                  <p style={{ margin: 0, fontSize: '14px', color: '#718096' }}>
                     Ready to share your next story?
                   </p>
                 </div>
@@ -266,26 +292,28 @@ const Home = () => {
               <Link to="/create" className="btn btn-primary" style={{ 
                 textDecoration: 'none',
                 width: '100%',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                padding: '16px'
               }}>
-                Write New Post
+                ✨ Create New Story
               </Link>
             </div>
           )}
 
           {/* Trending Tags */}
-          <div className="card" style={{ padding: '24px', marginBottom: '24px' }}>
+          <div className="card" style={{ padding: '32px', marginBottom: '32px' }}>
             <h3 style={{ 
-              fontSize: '18px', 
-              fontWeight: '600', 
-              marginBottom: '16px',
-              color: '#212529'
+              fontSize: '20px', 
+              fontWeight: '700', 
+              marginBottom: '20px',
+              color: '#1a202c',
+              fontFamily: 'Playfair Display, serif'
             }}>
               🔥 Trending Topics
             </h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
               {trendingTags.length === 0 ? (
-                <p style={{ color: '#6c757d', fontSize: '14px', margin: 0 }}>
+                <p style={{ color: '#718096', fontSize: '14px', margin: 0 }}>
                   No trending tags yet
                 </p>
               ) : (
@@ -298,7 +326,7 @@ const Home = () => {
                   >
                     #{tag.name}
                     <span style={{ 
-                      marginLeft: '4px', 
+                      marginLeft: '6px', 
                       fontSize: '11px', 
                       opacity: 0.7 
                     }}>
@@ -311,26 +339,27 @@ const Home = () => {
           </div>
 
           {/* Writing Tips */}
-          <div className="card" style={{ padding: '24px' }}>
+          <div className="card" style={{ padding: '32px' }}>
             <h3 style={{ 
-              fontSize: '18px', 
-              fontWeight: '600', 
-              marginBottom: '16px',
-              color: '#212529'
+              fontSize: '20px', 
+              fontWeight: '700', 
+              marginBottom: '20px',
+              color: '#1a202c',
+              fontFamily: 'Playfair Display, serif'
             }}>
               💡 Writing Tips
             </h3>
             <ul style={{ 
               margin: 0, 
-              paddingLeft: '20px', 
-              color: '#6c757d',
+              paddingLeft: '24px', 
+              color: '#718096',
               fontSize: '14px',
-              lineHeight: '1.6'
+              lineHeight: '1.7'
             }}>
-              <li style={{ marginBottom: '8px' }}>Use compelling headlines to grab attention</li>
-              <li style={{ marginBottom: '8px' }}>Tell stories that resonate with your audience</li>
-              <li style={{ marginBottom: '8px' }}>Add images to make your posts more engaging</li>
-              <li>Engage with other writers in the community</li>
+              <li style={{ marginBottom: '10px' }}>✨ Craft compelling headlines that spark curiosity</li>
+              <li style={{ marginBottom: '10px' }}>🎯 Tell authentic stories that resonate deeply</li>
+              <li style={{ marginBottom: '10px' }}>🖼️ Use visuals to enhance your narrative</li>
+              <li>🤝 Build connections through meaningful engagement</li>
             </ul>
           </div>
         </aside>

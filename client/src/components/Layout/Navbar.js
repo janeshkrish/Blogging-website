@@ -23,12 +23,12 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="navbar-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '16px 0' }}>
+        <div className="navbar-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 0' }}>
           <Link to="/" className="navbar-brand">
-            BlogApp
+            ✨ StoryHub
           </Link>
           
-          <div className="navbar-desktop" style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
+          <div className="navbar-desktop" style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
             {/* Desktop Navigation */}
             <ul className="navbar-nav" style={{ display: window.innerWidth > 768 ? 'flex' : 'none' }}>
               <li>
@@ -36,7 +36,7 @@ const Navbar = () => {
                   to="/" 
                   className={`nav-link ${isActive('/') ? 'active' : ''}`}
                 >
-                  Home
+                  🏠 Home
                 </Link>
               </li>
               <li>
@@ -44,7 +44,7 @@ const Navbar = () => {
                   to="/search" 
                   className={`nav-link ${isActive('/search') ? 'active' : ''}`}
                 >
-                  Search
+                  🔍 Discover
                 </Link>
               </li>
               
@@ -55,7 +55,7 @@ const Navbar = () => {
                       to="/create" 
                       className={`nav-link ${isActive('/create') ? 'active' : ''}`}
                     >
-                      Write
+                      ✍️ Write
                     </Link>
                   </li>
                   <li style={{ position: 'relative' }}>
@@ -64,23 +64,24 @@ const Navbar = () => {
                       className={`nav-link ${isActive('/notifications') ? 'active' : ''}`}
                       style={{ position: 'relative' }}
                     >
-                      Notifications
+                      🔔 Notifications
                       {unreadCount > 0 && (
                         <span 
                           style={{
                             position: 'absolute',
-                            top: '-8px',
-                            right: '-8px',
-                            background: '#dc3545',
+                            top: '-6px',
+                            right: '-6px',
+                            background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)',
                             color: 'white',
                             borderRadius: '50%',
-                            width: '20px',
-                            height: '20px',
+                            width: '22px',
+                            height: '22px',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            fontSize: '12px',
-                            fontWeight: '700'
+                            fontSize: '11px',
+                            fontWeight: '700',
+                            boxShadow: '0 2px 8px rgba(255, 107, 107, 0.4)'
                           }}
                         >
                           {unreadCount > 99 ? '99+' : unreadCount}
@@ -97,7 +98,7 @@ const Navbar = () => {
                         src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=667eea&color=fff`}
                         alt={user.username}
                         className="avatar avatar-sm"
-                        style={{ marginRight: '8px' }}
+                        style={{ marginRight: '10px' }}
                       />
                       Profile
                     </Link>
@@ -106,9 +107,13 @@ const Navbar = () => {
                     <button 
                       onClick={handleLogout}
                       className="nav-link"
-                      style={{ background: 'none', border: 'none' }}
+                      style={{ 
+                        background: 'none', 
+                        border: 'none',
+                        cursor: 'pointer'
+                      }}
                     >
-                      Logout
+                      🚪 Logout
                     </button>
                   </li>
                 </>
@@ -119,16 +124,20 @@ const Navbar = () => {
                       to="/login" 
                       className={`nav-link ${isActive('/login') ? 'active' : ''}`}
                     >
-                      Login
+                      🔑 Sign In
                     </Link>
                   </li>
                   <li>
                     <Link 
                       to="/register" 
                       className="btn btn-primary"
-                      style={{ textDecoration: 'none' }}
+                      style={{ 
+                        textDecoration: 'none',
+                        padding: '12px 24px',
+                        borderRadius: '12px'
+                      }}
                     >
-                      Get Started
+                      ✨ Join Now
                     </Link>
                   </li>
                 </>
@@ -143,12 +152,15 @@ const Navbar = () => {
                 display: window.innerWidth <= 768 ? 'block' : 'none',
                 background: 'none',
                 border: 'none',
-                fontSize: '24px',
+                fontSize: '28px',
                 cursor: 'pointer',
-                color: '#495057'
+                color: '#4a5568',
+                padding: '8px',
+                borderRadius: '8px',
+                transition: 'all 0.3s ease'
               }}
             >
-              ☰
+              {isMenuOpen ? '✕' : '☰'}
             </button>
           </div>
         </div>
@@ -157,55 +169,46 @@ const Navbar = () => {
         {isMenuOpen && (
           <div 
             className="mobile-nav"
-            style={{
-              display: 'block',
-              background: 'white',
-              border: '1px solid #e9ecef',
-              borderRadius: '8px',
-              marginTop: '8px',
-              padding: '16px',
-              boxShadow: '0 4px 20px rgba(0, 0, 0, 0.1)'
-            }}
           >
             <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <Link 
                   to="/" 
                   className={`nav-link ${isActive('/') ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Home
+                  🏠 Home
                 </Link>
               </li>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <Link 
                   to="/search" 
                   className={`nav-link ${isActive('/search') ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Search
+                  🔍 Discover
                 </Link>
               </li>
               
               {user ? (
                 <>
-                  <li style={{ marginBottom: '8px' }}>
+                  <li style={{ marginBottom: '12px' }}>
                     <Link 
                       to="/create" 
                       className={`nav-link ${isActive('/create') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Write
+                      ✍️ Write
                     </Link>
                   </li>
-                  <li style={{ marginBottom: '8px' }}>
+                  <li style={{ marginBottom: '12px' }}>
                     <Link 
                       to="/notifications" 
                       className={`nav-link ${isActive('/notifications') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                       style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
                     >
-                      Notifications
+                      🔔 Notifications
                       {unreadCount > 0 && (
                         <span className="badge badge-primary">
                           {unreadCount > 99 ? '99+' : unreadCount}
@@ -213,7 +216,7 @@ const Navbar = () => {
                       )}
                     </Link>
                   </li>
-                  <li style={{ marginBottom: '8px' }}>
+                  <li style={{ marginBottom: '12px' }}>
                     <Link 
                       to="/profile" 
                       className={`nav-link ${isActive('/profile') ? 'active' : ''}`}
@@ -223,7 +226,7 @@ const Navbar = () => {
                         src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=667eea&color=fff`}
                         alt={user.username}
                         className="avatar avatar-sm"
-                        style={{ marginRight: '8px' }}
+                        style={{ marginRight: '10px' }}
                       />
                       Profile
                     </Link>
@@ -236,22 +239,23 @@ const Navbar = () => {
                         background: 'none', 
                         border: 'none', 
                         width: '100%', 
-                        textAlign: 'left' 
+                        textAlign: 'left',
+                        cursor: 'pointer'
                       }}
                     >
-                      Logout
+                      🚪 Logout
                     </button>
                   </li>
                 </>
               ) : (
                 <>
-                  <li style={{ marginBottom: '8px' }}>
+                  <li style={{ marginBottom: '12px' }}>
                     <Link 
                       to="/login" 
                       className={`nav-link ${isActive('/login') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      Login
+                      🔑 Sign In
                     </Link>
                   </li>
                   <li>
@@ -262,10 +266,12 @@ const Navbar = () => {
                       style={{ 
                         textDecoration: 'none',
                         display: 'block',
-                        textAlign: 'center'
+                        textAlign: 'center',
+                        padding: '16px',
+                        borderRadius: '12px'
                       }}
                     >
-                      Get Started
+                      ✨ Join Now
                     </Link>
                   </li>
                 </>

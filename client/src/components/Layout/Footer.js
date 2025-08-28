@@ -3,103 +3,153 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer style={{
-      background: '#2c3e50',
+      background: 'linear-gradient(135deg, #2d3748 0%, #1a202c 100%)',
       color: 'white',
-      padding: '40px 0',
+      padding: '60px 0 40px',
       marginTop: 'auto'
     }}>
       <div className="container">
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '32px',
-          marginBottom: '32px'
+          gap: '40px',
+          marginBottom: '40px'
         }}>
           <div>
             <h3 style={{ 
-              fontSize: '24px', 
-              fontWeight: '700',
-              marginBottom: '16px',
+              fontSize: '28px', 
+              fontWeight: '800',
+              marginBottom: '20px',
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text'
+              backgroundClip: 'text',
+              fontFamily: 'Playfair Display, serif'
             }}>
-              BlogApp
+              ✨ StoryHub
             </h3>
             <p style={{ 
-              color: '#bdc3c7', 
-              lineHeight: '1.6',
-              marginBottom: '20px'
+              color: 'rgba(255, 255, 255, 0.8)', 
+              lineHeight: '1.7',
+              marginBottom: '24px',
+              fontSize: '15px'
             }}>
-              A modern blogging platform where writers share their stories, 
-              connect with readers, and build communities around their ideas.
+              A vibrant community where storytellers, creators, and thought leaders 
+              share their unique perspectives and connect with engaged readers worldwide.
             </p>
-            <div style={{ display: 'flex', gap: '16px' }}>
+            <div style={{ display: 'flex', gap: '20px' }}>
               <a href="#" style={{ 
-                color: '#bdc3c7', 
-                fontSize: '20px',
-                transition: 'color 0.2s ease'
+                color: 'rgba(255, 255, 255, 0.7)', 
+                fontSize: '24px',
+                transition: 'all 0.3s ease',
+                padding: '8px',
+                borderRadius: '8px',
+                background: 'rgba(255, 255, 255, 0.1)'
+              }} onMouseOver={(e) => {
+                e.target.style.color = 'white';
+                e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+              }} onMouseOut={(e) => {
+                e.target.style.color = 'rgba(255, 255, 255, 0.7)';
+                e.target.style.background = 'rgba(255, 255, 255, 0.1)';
               }}>📧</a>
               <a href="#" style={{ 
-                color: '#bdc3c7', 
-                fontSize: '20px',
-                transition: 'color 0.2s ease'
+                color: 'rgba(255, 255, 255, 0.7)', 
+                fontSize: '24px',
+                transition: 'all 0.3s ease',
+                padding: '8px',
+                borderRadius: '8px',
+                background: 'rgba(255, 255, 255, 0.1)'
+              }} onMouseOver={(e) => {
+                e.target.style.color = 'white';
+                e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+              }} onMouseOut={(e) => {
+                e.target.style.color = 'rgba(255, 255, 255, 0.7)';
+                e.target.style.background = 'rgba(255, 255, 255, 0.1)';
               }}>🐦</a>
               <a href="#" style={{ 
-                color: '#bdc3c7', 
-                fontSize: '20px',
-                transition: 'color 0.2s ease'
+                color: 'rgba(255, 255, 255, 0.7)', 
+                fontSize: '24px',
+                transition: 'all 0.3s ease',
+                padding: '8px',
+                borderRadius: '8px',
+                background: 'rgba(255, 255, 255, 0.1)'
+              }} onMouseOver={(e) => {
+                e.target.style.color = 'white';
+                e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+              }} onMouseOut={(e) => {
+                e.target.style.color = 'rgba(255, 255, 255, 0.7)';
+                e.target.style.background = 'rgba(255, 255, 255, 0.1)';
               }}>📱</a>
             </div>
           </div>
 
           <div>
             <h4 style={{ 
-              fontSize: '18px', 
-              fontWeight: '600', 
-              marginBottom: '16px',
-              color: 'white'
+              fontSize: '20px', 
+              fontWeight: '700', 
+              marginBottom: '20px',
+              color: 'white',
+              fontFamily: 'Playfair Display, serif'
             }}>
-              Platform
+              🚀 Platform
             </h4>
             <ul style={{ 
               listStyle: 'none', 
               padding: 0, 
               margin: 0 
             }}>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   How it works
                 </a>
               </li>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Features
                 </a>
               </li>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Pricing
                 </a>
               </li>
               <li>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   API Documentation
                 </a>
@@ -109,50 +159,71 @@ const Footer = () => {
 
           <div>
             <h4 style={{ 
-              fontSize: '18px', 
-              fontWeight: '600', 
-              marginBottom: '16px',
-              color: 'white'
+              fontSize: '20px', 
+              fontWeight: '700', 
+              marginBottom: '20px',
+              color: 'white',
+              fontFamily: 'Playfair Display, serif'
             }}>
-              Resources
+              📚 Resources
             </h4>
             <ul style={{ 
               listStyle: 'none', 
               padding: 0, 
               margin: 0 
             }}>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Writing Guide
                 </a>
               </li>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Community Guidelines
                 </a>
               </li>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Help Center
                 </a>
               </li>
               <li>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Contact Support
                 </a>
@@ -162,50 +233,71 @@ const Footer = () => {
 
           <div>
             <h4 style={{ 
-              fontSize: '18px', 
-              fontWeight: '600', 
-              marginBottom: '16px',
-              color: 'white'
+              fontSize: '20px', 
+              fontWeight: '700', 
+              marginBottom: '20px',
+              color: 'white',
+              fontFamily: 'Playfair Display, serif'
             }}>
-              Legal
+              ⚖️ Legal
             </h4>
             <ul style={{ 
               listStyle: 'none', 
               padding: 0, 
               margin: 0 
             }}>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Privacy Policy
                 </a>
               </li>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Terms of Service
                 </a>
               </li>
-              <li style={{ marginBottom: '8px' }}>
+              <li style={{ marginBottom: '12px' }}>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   Cookie Policy
                 </a>
               </li>
               <li>
                 <a href="#" style={{ 
-                  color: '#bdc3c7', 
+                  color: 'rgba(255, 255, 255, 0.8)', 
                   textDecoration: 'none',
-                  transition: 'color 0.2s ease'
+                  transition: 'color 0.3s ease',
+                  fontSize: '15px'
+                }} onMouseOver={(e) => {
+                  e.target.style.color = '#667eea';
+                }} onMouseOut={(e) => {
+                  e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
                   DMCA
                 </a>
@@ -215,44 +307,56 @@ const Footer = () => {
         </div>
 
         <div style={{
-          borderTop: '1px solid #34495e',
-          paddingTop: '24px',
+          borderTop: '1px solid rgba(255, 255, 255, 0.2)',
+          paddingTop: '32px',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '16px'
+          gap: '20px'
         }}>
           <p style={{ 
-            color: '#bdc3c7', 
+            color: 'rgba(255, 255, 255, 0.7)', 
             margin: 0,
-            fontSize: '14px'
+            fontSize: '15px'
           }}>
-            © 2024 BlogApp. All rights reserved. Made with ❤️ for writers everywhere.
+            © 2025 StoryHub. All rights reserved. Made with ❤️ for storytellers everywhere.
           </p>
           <div style={{ 
             display: 'flex', 
-            gap: '24px',
-            fontSize: '14px'
+            gap: '32px',
+            fontSize: '15px'
           }}>
             <a href="#" style={{ 
-              color: '#bdc3c7', 
+              color: 'rgba(255, 255, 255, 0.7)', 
               textDecoration: 'none',
-              transition: 'color 0.2s ease'
+              transition: 'color 0.3s ease'
+            }} onMouseOver={(e) => {
+              e.target.style.color = '#667eea';
+            }} onMouseOut={(e) => {
+              e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
               Status
             </a>
             <a href="#" style={{ 
-              color: '#bdc3c7', 
+              color: 'rgba(255, 255, 255, 0.7)', 
               textDecoration: 'none',
-              transition: 'color 0.2s ease'
+              transition: 'color 0.3s ease'
+            }} onMouseOver={(e) => {
+              e.target.style.color = '#667eea';
+            }} onMouseOut={(e) => {
+              e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
               Blog
             </a>
             <a href="#" style={{ 
-              color: '#bdc3c7', 
+              color: 'rgba(255, 255, 255, 0.7)', 
               textDecoration: 'none',
-              transition: 'color 0.2s ease'
+              transition: 'color 0.3s ease'
+            }} onMouseOver={(e) => {
+              e.target.style.color = '#667eea';
+            }} onMouseOut={(e) => {
+              e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
               Changelog
             </a>

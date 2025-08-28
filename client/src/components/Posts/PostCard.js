@@ -55,7 +55,7 @@ const PostCard = ({ post, onUpdate }) => {
   return (
     <article className="post-card card">
       {post.image && (
-        <div style={{ width: '100%', height: '200px', overflow: 'hidden', borderRadius: '12px 12px 0 0' }}>
+        <div style={{ width: '100%', height: '240px', overflow: 'hidden', borderRadius: '16px', marginBottom: '24px' }}>
           <img 
             src={post.image} 
             alt={post.title}
@@ -63,30 +63,31 @@ const PostCard = ({ post, onUpdate }) => {
               width: '100%', 
               height: '100%', 
               objectFit: 'cover',
-              transition: 'transform 0.3s ease'
+              transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
             }}
-            onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
+            onMouseOver={(e) => e.target.style.transform = 'scale(1.08)'}
             onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
           />
         </div>
       )}
       
-      <div className="post-card-content" style={{ padding: '24px' }}>
+      <div className="post-card-content">
         <div className="post-card-header">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <img
               src={post.author?.profilePicture || `https://ui-avatars.com/api/?name=${post.author?.username}&background=667eea&color=fff`}
               alt={post.author?.username}
-              className="avatar avatar-sm"
+              className="avatar avatar-md"
             />
             <div>
               <Link 
                 to={`/user/${post.author?.username}`}
                 style={{ 
                   textDecoration: 'none', 
-                  color: '#495057', 
+                  color: '#4a5568', 
                   fontWeight: '600',
-                  fontSize: '14px'
+                  fontSize: '15px',
+                  transition: 'color 0.3s ease'
                 }}
               >
                 {post.author?.username}
@@ -98,9 +99,11 @@ const PostCard = ({ post, onUpdate }) => {
                 )}
                 {post.status === 'draft' && (
                   <span className="badge" style={{ 
-                    marginLeft: '8px', 
-                    background: '#ffc107', 
-                    color: '#000' 
+                    marginLeft: '12px', 
+                    background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)', 
+                    color: 'white',
+                    fontSize: '11px',
+                    padding: '4px 10px'
                   }}>
                     Draft
                   </span>
@@ -143,12 +146,12 @@ const PostCard = ({ post, onUpdate }) => {
                 border: 'none',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '6px',
+                gap: '8px',
                 cursor: loading ? 'not-allowed' : 'pointer',
                 opacity: loading ? 0.6 : 1
               }}
             >
-              <span style={{ fontSize: '16px' }}>
+              <span style={{ fontSize: '18px' }}>
                 {isLiked ? '❤️' : '🤍'}
               </span>
               <span>{likesCount}</span>
@@ -159,18 +162,18 @@ const PostCard = ({ post, onUpdate }) => {
               className="post-action"
               style={{ textDecoration: 'none' }}
             >
-              <span style={{ fontSize: '16px' }}>💬</span>
+              <span style={{ fontSize: '18px' }}>💬</span>
               <span>{post.commentsCount || 0}</span>
             </Link>
 
             <div className="post-action">
-              <span style={{ fontSize: '16px' }}>👀</span>
+              <span style={{ fontSize: '18px' }}>👁️</span>
               <span>{post.views || 0}</span>
             </div>
           </div>
 
           {user && user._id === post.author?._id && (
-            <div style={{ display: 'flex', gap: '8px' }}>
+            <div style={{ display: 'flex', gap: '12px' }}>
               <Link
                 to={`/edit/${post._id}`}
                 className="btn btn-sm btn-secondary"
