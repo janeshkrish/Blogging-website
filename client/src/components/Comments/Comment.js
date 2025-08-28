@@ -192,7 +192,7 @@ const Comment = ({ comment, postId, onUpdate, onDelete, isReply = false }) => {
         >
           <span>{isLiked ? '❤️' : '🤍'}</span>
           {likesCount > 0 && <span>{likesCount}</span>}
-          }
+        
         </button>
 
         {user && !isReply && (

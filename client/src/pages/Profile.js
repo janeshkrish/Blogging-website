@@ -139,9 +139,9 @@ const Profile = () => {
             <h2 className="form-title">Edit Profile</h2>
 
             {error && <div className="error-message">{error}</div>}
-            }
+          
             {success && <div className="success-message">{success}</div>}
-            }
+            
 
             <form onSubmit={handleSubmit}>
               <div className="form-group">
