@@ -65,11 +65,12 @@ const Register = () => {
       alignItems: 'center', 
       justifyContent: 'center' 
     }}>
-      <div className="form-container" style={{ width: '100%', maxWidth: '450px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-          <h1 className="form-title">Join BlogApp</h1>
-          <p style={{ color: '#6c757d', fontSize: '16px' }}>
-            Create your account and start sharing your stories
+      <div className="form-container" style={{ width: '100%', maxWidth: '550px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div style={{ fontSize: '80px', marginBottom: '24px' }}>🚀</div>
+          <h1 className="form-title">Join BlogSphere</h1>
+          <p style={{ color: '#6b7280', fontSize: '18px' }}>
+            Start your creative journey and connect with millions of readers
           </p>
         </div>
 
@@ -81,7 +82,7 @@ const Register = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="username" className="form-label">Username</label>
+            <label htmlFor="username" className="form-label">Creator Username</label>
             <input
               type="text"
               id="username"
@@ -89,20 +90,20 @@ const Register = () => {
               value={formData.username}
               onChange={handleChange}
               className="form-input"
-              placeholder="Choose a unique username"
+              placeholder="Choose your unique username"
               required
               minLength={3}
               maxLength={30}
               pattern="[a-zA-Z0-9_]+"
               title="Username can only contain letters, numbers, and underscores"
             />
-            <small style={{ color: '#6c757d', fontSize: '13px' }}>
+            <small style={{ color: '#6b7280', fontSize: '14px' }}>
               3-30 characters, letters, numbers, and underscores only
             </small>
           </div>
 
           <div className="form-group">
-            <label htmlFor="email" className="form-label">Email</label>
+            <label htmlFor="email" className="form-label">Email Address</label>
             <input
               type="email"
               id="email"
@@ -128,7 +129,7 @@ const Register = () => {
               required
               minLength={6}
             />
-            <small style={{ color: '#6c757d', fontSize: '13px' }}>
+            <small style={{ color: '#6b7280', fontSize: '14px' }}>
               At least 6 characters long
             </small>
           </div>
@@ -151,19 +152,19 @@ const Register = () => {
             type="submit"
             className="btn btn-primary"
             disabled={loading}
-            style={{ width: '100%', marginBottom: '20px' }}
+            style={{ width: '100%', marginBottom: '24px' }}
           >
-            {loading ? 'Creating account...' : 'Create Account'}
+            {loading ? '✨ Creating your account...' : '🚀 Create Account'}
           </button>
         </form>
 
         <div style={{ textAlign: 'center' }}>
-          <p style={{ color: '#6c757d', marginBottom: '16px' }}>
+          <p style={{ color: '#6b7280', marginBottom: '20px' }}>
             Already have an account?{' '}
             <Link 
               to="/login" 
               style={{ 
-                color: '#667eea', 
+                color: '#10b981', 
                 textDecoration: 'none', 
                 fontWeight: '600' 
               }}
@@ -175,47 +176,48 @@ const Register = () => {
 
         {/* Features Preview */}
         <div style={{
-          marginTop: '32px',
-          padding: '20px',
-          background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)',
-          borderRadius: '12px',
-          border: '1px solid rgba(102, 126, 234, 0.2)'
+          marginTop: '40px',
+          padding: '32px',
+          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)',
+          borderRadius: '24px',
+          border: '2px solid rgba(16, 185, 129, 0.3)'
         }}>
           <h4 style={{ 
-            fontSize: '16px', 
-            fontWeight: '600', 
-            marginBottom: '16px',
-            color: '#495057'
+            fontSize: '18px', 
+            fontWeight: '700', 
+            marginBottom: '20px',
+            color: '#064e3b'
           }}>
-            🚀 What you'll get:
+            🌟 What awaits you:
           </h4>
           <ul style={{ 
             margin: 0, 
-            paddingLeft: '20px', 
-            color: '#6c757d',
-            fontSize: '14px',
-            lineHeight: '1.6'
+            paddingLeft: '24px', 
+            color: '#065f46',
+            fontSize: '15px',
+            lineHeight: '1.8'
           }}>
-            <li style={{ marginBottom: '6px' }}>Write and publish unlimited posts</li>
-            <li style={{ marginBottom: '6px' }}>Follow writers and build your network</li>
-            <li style={{ marginBottom: '6px' }}>Like and comment on posts</li>
-            <li style={{ marginBottom: '6px' }}>Get real-time notifications</li>
-            <li>Build your personal profile and following</li>
+            <li style={{ marginBottom: '8px' }}>✍️ Advanced writing tools and editor</li>
+            <li style={{ marginBottom: '8px' }}>📊 Detailed analytics and insights</li>
+            <li style={{ marginBottom: '8px' }}>💰 Monetization opportunities</li>
+            <li style={{ marginBottom: '8px' }}>🌐 Global community of creators</li>
+            <li style={{ marginBottom: '8px' }}>🔔 Real-time engagement notifications</li>
+            <li>🚀 SEO optimization and growth tools</li>
           </ul>
         </div>
 
         <div style={{ 
           textAlign: 'center', 
-          marginTop: '32px', 
-          paddingTop: '20px',
-          borderTop: '1px solid #e9ecef'
+          marginTop: '40px', 
+          paddingTop: '24px',
+          borderTop: '1px solid rgba(16, 185, 129, 0.2)'
         }}>
           <Link 
             to="/"
             style={{ 
-              color: '#6c757d', 
+              color: '#6b7280', 
               textDecoration: 'none',
-              fontSize: '14px'
+              fontSize: '15px'
             }}
           >
             ← Back to Home

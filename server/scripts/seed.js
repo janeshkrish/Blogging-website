@@ -20,11 +20,11 @@ const seedData = async () => {
     // Create admin user
     const admin = new User({
       username: 'admin',
-      email: 'admin@blog.com',
+      email: 'admin@blogsphere.com',
       password: 'admin123',
       role: 'admin',
-      bio: 'Blog administrator',
-      profilePicture: 'https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=200'
+      bio: 'Platform administrator and content curator',
+      profilePicture: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200'
     });
     await admin.save();
     console.log('Created admin user');
@@ -33,25 +33,32 @@ const seedData = async () => {
     const users = [];
     const sampleUsers = [
       {
-        username: 'johndoe',
-        email: 'john@example.com',
+        username: 'alexwriter',
+        email: 'alex@example.com',
         password: 'password123',
-        bio: 'Tech enthusiast and blogger',
-        profilePicture: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=200'
+        bio: 'Digital storyteller passionate about technology and human connection',
+        profilePicture: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=200'
       },
       {
-        username: 'janedoe',
-        email: 'jane@example.com',
+        username: 'mariablog',
+        email: 'maria@example.com',
         password: 'password123',
-        bio: 'Designer and creative writer',
-        profilePicture: 'https://images.pexels.com/photos/3992656/pexels-photo-3992656.jpeg?auto=compress&cs=tinysrgb&w=200'
+        bio: 'Creative director and lifestyle blogger sharing inspiration daily',
+        profilePicture: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=200'
       },
       {
-        username: 'mikebrown',
-        email: 'mike@example.com',
+        username: 'davidtech',
+        email: 'david@example.com',
         password: 'password123',
-        bio: 'Developer and startup founder',
-        profilePicture: 'https://images.pexels.com/photos/4164470/pexels-photo-4164470.jpeg?auto=compress&cs=tinysrgb&w=200'
+        bio: 'Software engineer and entrepreneur building the next generation of apps',
+        profilePicture: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=200'
+      },
+      {
+        username: 'sophiacreates',
+        email: 'sophia@example.com',
+        password: 'password123',
+        bio: 'UX designer and content creator helping brands tell better stories',
+        profilePicture: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=200'
       }
     ];
 
@@ -62,224 +69,462 @@ const seedData = async () => {
     }
     console.log('Created sample users');
 
-    // Create sample posts
+    // Create sample posts with new content
     const samplePosts = [
       {
-        title: 'Getting Started with React Hooks',
-        body: `React Hooks have revolutionized the way we write React components. In this comprehensive guide, we'll explore the most commonly used hooks and how they can simplify your code.
+        title: 'The Future of AI-Powered Content Creation',
+        body: `Artificial Intelligence is revolutionizing how we create, edit, and distribute content. From automated writing assistants to AI-generated visuals, the landscape of digital content is evolving at breakneck speed.
 
-## What are React Hooks?
+## The Rise of AI Writing Tools
 
-Hooks are functions that let you "hook into" React state and lifecycle features from function components. They were introduced in React 16.8 and have since become the standard way of writing React components.
+Modern AI writing tools have moved beyond simple grammar checking. They now offer:
 
-## useState Hook
+- **Content ideation** - Generate topic ideas based on trending keywords
+- **Style adaptation** - Match your brand voice and tone
+- **SEO optimization** - Automatically optimize for search engines
+- **Multi-language support** - Create content in dozens of languages
 
-The useState hook is the most basic hook that allows you to add state to functional components:
+## Impact on Creative Industries
 
-\`\`\`javascript
-import React, { useState } from 'react';
+The creative industry is experiencing a paradigm shift. Writers, designers, and marketers are learning to collaborate with AI rather than compete against it.
 
-function Counter() {
-  const [count, setCount] = useState(0);
+### For Content Creators
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
-\`\`\`
+AI tools are becoming the new creative partner:
+- Faster ideation and brainstorming
+- Enhanced research capabilities
+- Automated formatting and optimization
+- Real-time collaboration features
 
-## useEffect Hook
+### For Businesses
 
-The useEffect hook lets you perform side effects in function components. It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+Companies are leveraging AI to scale their content operations:
+- Personalized content at scale
+- Automated social media management
+- Dynamic website content
+- Customer-specific messaging
 
-This is just the beginning of your React Hooks journey. There are many more hooks to explore, and you can even create your own custom hooks!`,
+## The Human Element
+
+Despite AI's capabilities, human creativity remains irreplaceable. The most successful content combines AI efficiency with human insight, emotion, and authentic storytelling.
+
+The future belongs to creators who embrace AI as a powerful tool while maintaining their unique voice and perspective. Are you ready to join this revolution?`,
         author: users[0]._id,
-        tags: ['react', 'javascript', 'frontend', 'hooks'],
-        image: 'https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=800',
+        tags: ['ai', 'technology', 'content-creation', 'future'],
+        image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
         status: 'published'
       },
       {
-        title: 'The Art of User Experience Design',
-        body: `User Experience (UX) design is more than just making things look pretty. It's about creating meaningful and relevant experiences for users. In this article, we'll explore the fundamental principles of UX design.
+        title: 'Building Authentic Connections in the Digital Age',
+        body: `In our hyper-connected world, authentic relationships have become more valuable than ever. Social media promised to bring us closer, but many feel more isolated than before. How do we build genuine connections in the digital space?
 
-## Understanding Your Users
+## The Authenticity Crisis
 
-Before you start designing, you need to understand who your users are, what they need, and what problems they're trying to solve. User research is the foundation of good UX design.
+Modern social platforms often encourage performative behavior over genuine interaction. Users curate perfect lives, leading to:
 
-### User Personas
+- Comparison culture and decreased self-esteem
+- Surface-level interactions without depth
+- Fear of vulnerability and genuine expression
+- Echo chambers that limit diverse perspectives
 
-Creating user personas helps you understand your target audience better. A persona is a fictional character that represents a segment of your users.
+## Strategies for Authentic Digital Connection
 
-## Design Thinking Process
+### 1. Share Your Real Story
 
-The design thinking process consists of five stages:
+Don't just share your highlights. Include:
+- Challenges you've overcome
+- Lessons learned from failures
+- Behind-the-scenes moments
+- Genuine emotions and thoughts
 
-1. **Empathize** - Understand your users
-2. **Define** - Frame the problem
-3. **Ideate** - Generate solutions
-4. **Prototype** - Build and test
-5. **Test** - Get feedback and iterate
+### 2. Engage Meaningfully
 
-## Usability Principles
+Quality over quantity in interactions:
+- Ask thoughtful questions
+- Share personal experiences in comments
+- Offer genuine support and encouragement
+- Listen more than you speak
 
-Jakob Nielsen's 10 usability heuristics are still relevant today:
-- Visibility of system status
-- Match between system and real world
-- User control and freedom
-- Consistency and standards
-- Error prevention
+### 3. Create Safe Spaces
 
-Remember, good UX design is invisible. When users can accomplish their goals without thinking about the interface, you've succeeded.`,
+Foster environments where others feel comfortable being authentic:
+- Moderate discussions respectfully
+- Celebrate diverse perspectives
+- Address negativity constructively
+- Lead by example with vulnerability
+
+## The Power of Storytelling
+
+Stories connect us on a fundamental human level. When we share our experiences, struggles, and triumphs, we create bridges of understanding that transcend digital barriers.
+
+### Elements of Compelling Stories
+
+- **Vulnerability** - Share what matters to you
+- **Relatability** - Connect to universal experiences
+- **Growth** - Show transformation and learning
+- **Hope** - Inspire others with possibility
+
+## Building Your Digital Community
+
+Creating authentic connections isn't about follower counts—it's about impact. Focus on:
+
+- Consistency in your values and message
+- Regular, meaningful engagement
+- Supporting others' growth and success
+- Being genuinely interested in your audience
+
+The digital age offers unprecedented opportunities for connection. By choosing authenticity over perfection, we can build relationships that enrich our lives and create positive change in the world.`,
         author: users[1]._id,
-        tags: ['ux', 'design', 'user-experience', 'ui'],
+        tags: ['authenticity', 'digital-connection', 'social-media', 'relationships'],
+        image: 'https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800',
+        status: 'published'
+      },
+      {
+        title: 'The Art of Minimalist Design in Modern Web Development',
+        body: `Minimalism in web design isn't just about using white space—it's a philosophy that prioritizes user experience through intentional simplicity. Let's explore how minimalist principles can transform your digital products.
+
+## Core Principles of Minimalist Design
+
+### Less is More
+
+Every element on your page should serve a purpose:
+- Remove unnecessary decorative elements
+- Focus on essential functionality
+- Use whitespace strategically
+- Prioritize content hierarchy
+
+### Typography as a Design Element
+
+In minimalist design, typography carries more weight:
+- Choose fonts that reflect your brand personality
+- Use font weights and sizes to create hierarchy
+- Ensure excellent readability across devices
+- Limit yourself to 2-3 font families maximum
+
+## Color Psychology in Minimal Design
+
+Color choices become more impactful when you use fewer of them:
+
+### Monochromatic Schemes
+- Create depth through shades and tints
+- Maintain visual cohesion
+- Direct attention effectively
+- Reduce cognitive load
+
+### Accent Colors
+- Use sparingly for calls-to-action
+- Choose colors that align with your brand
+- Ensure sufficient contrast for accessibility
+- Test across different devices and lighting
+
+## User Experience Benefits
+
+Minimalist design directly improves UX:
+
+### Faster Load Times
+- Fewer assets to download
+- Optimized images and graphics
+- Cleaner code structure
+- Better performance metrics
+
+### Improved Focus
+- Users can find what they need quickly
+- Reduced decision fatigue
+- Clear navigation paths
+- Enhanced conversion rates
+
+### Mobile-First Approach
+- Naturally responsive design
+- Touch-friendly interfaces
+- Readable content on small screens
+- Faster mobile performance
+
+## Implementation Strategies
+
+### Start with Content
+1. Audit your existing content
+2. Identify core messages
+3. Remove redundant information
+4. Organize by importance
+
+### Design Systems
+- Create consistent spacing rules
+- Establish color palettes
+- Define typography scales
+- Build reusable components
+
+### Testing and Iteration
+- A/B test different layouts
+- Gather user feedback
+- Monitor analytics
+- Continuously refine
+
+## Common Pitfalls to Avoid
+
+- **Over-simplification** - Don't remove essential functionality
+- **Lack of personality** - Minimal doesn't mean boring
+- **Poor accessibility** - Ensure your design works for everyone
+- **Ignoring context** - Consider your audience and industry
+
+Minimalist design is about making deliberate choices. Every element should enhance the user's journey toward their goal. When done right, minimalism creates elegant, efficient, and memorable digital experiences.
+
+Remember: Simplicity is the ultimate sophistication.`,
+        author: users[2]._id,
+        tags: ['design', 'minimalism', 'web-development', 'ux'],
         image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
         status: 'published'
       },
       {
-        title: 'Building Scalable Node.js Applications',
-        body: `Node.js has become one of the most popular platforms for building server-side applications. However, building scalable Node.js applications requires careful planning and implementation of best practices.
+        title: 'Mastering the Creator Economy: From Passion to Profit',
+        body: `The creator economy has exploded into a trillion-dollar industry, offering unprecedented opportunities for individuals to monetize their skills, knowledge, and creativity. Here's your comprehensive guide to thriving as a creator.
 
-## Architecture Patterns
+## Understanding the Creator Economy
 
-When building scalable applications, architecture matters. Here are some patterns to consider:
+The creator economy encompasses all the tools, platforms, and services that enable content creators to earn money from their work. It includes:
 
-### Microservices Architecture
+- Content platforms (YouTube, TikTok, Instagram)
+- Newsletter platforms (Substack, ConvertKit)
+- Course platforms (Teachable, Thinkific)
+- Membership sites (Patreon, Circle)
+- E-commerce tools (Shopify, Gumroad)
 
-Breaking your application into smaller, independent services can improve scalability and maintainability.
+## Finding Your Niche
 
-### Event-Driven Architecture
+Success in the creator economy starts with identifying your unique value proposition:
 
-Using events to communicate between different parts of your application can help create loosely coupled systems.
+### Assess Your Skills
+- What are you naturally good at?
+- What do people ask you for advice about?
+- What topics can you discuss for hours?
+- What problems can you solve for others?
 
-## Performance Optimization
+### Market Research
+- Study successful creators in your space
+- Identify gaps in existing content
+- Understand your target audience's pain points
+- Analyze trending topics and keywords
 
-Here are key strategies for optimizing Node.js performance:
+## Content Strategy Framework
 
-### Connection Pooling
+### The 80/20 Rule
+- 80% valuable, educational content
+- 20% promotional or personal content
 
-Always use connection pooling for database connections to avoid the overhead of creating new connections for each request.
+### Content Pillars
+Develop 3-5 core themes for your content:
+1. **Educational** - Teach your audience new skills
+2. **Inspirational** - Share motivational stories
+3. **Behind-the-scenes** - Show your process
+4. **Community** - Engage with your audience
+5. **Industry insights** - Share expert perspectives
 
-### Caching
+## Monetization Strategies
 
-Implement caching strategies using Redis or Memcached to reduce database load and improve response times.
+### Direct Monetization
+- **Sponsored content** - Partner with brands
+- **Product sales** - Create digital or physical products
+- **Services** - Offer consulting or freelance work
+- **Subscriptions** - Build recurring revenue streams
 
-### Load Balancing
+### Indirect Monetization
+- **Lead generation** - Build email lists
+- **Brand building** - Increase your market value
+- **Network expansion** - Connect with industry leaders
+- **Skill development** - Improve your expertise
 
-Use load balancers to distribute traffic across multiple instances of your application.
+## Building Your Audience
 
-## Monitoring and Logging
+### Consistency is Key
+- Post regularly on your chosen platforms
+- Maintain consistent quality standards
+- Develop a recognizable style and voice
+- Show up even when you don't feel like it
 
-Proper monitoring and logging are essential for maintaining scalable applications:
+### Engagement Strategies
+- Respond to every comment and message
+- Ask questions to encourage interaction
+- Share user-generated content
+- Collaborate with other creators
 
-- Use APM tools like New Relic or DataDog
-- Implement structured logging
-- Set up alerts for critical metrics
-- Monitor memory usage and garbage collection
+### Cross-Platform Growth
+- Repurpose content across multiple platforms
+- Tailor content to each platform's strengths
+- Use platform-specific features and trends
+- Drive traffic between your different channels
 
-## Security Best Practices
+## Tools and Resources
 
-Don't forget about security:
-- Always validate and sanitize input
-- Use HTTPS everywhere
-- Implement rate limiting
-- Keep dependencies updated
-- Use environment variables for secrets
+### Content Creation
+- **Canva** - Design graphics and visuals
+- **Loom** - Record screen and video content
+- **Grammarly** - Improve your writing
+- **Buffer** - Schedule social media posts
 
-Building scalable applications is an ongoing process. Always measure, monitor, and optimize based on real-world usage patterns.`,
-        author: users[2]._id,
-        tags: ['nodejs', 'javascript', 'backend', 'scalability'],
-        image: 'https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=800',
+### Analytics and Growth
+- **Google Analytics** - Track website performance
+- **Social media insights** - Monitor engagement
+- **Email marketing tools** - Nurture your audience
+- **SEO tools** - Optimize for search
+
+## Long-term Success Strategies
+
+### Diversify Your Income
+Never rely on a single revenue stream:
+- Multiple platform presence
+- Various monetization methods
+- Different content formats
+- Backup plans for platform changes
+
+### Invest in Yourself
+- Continuously learn new skills
+- Attend industry conferences
+- Network with other creators
+- Stay updated on platform changes
+
+### Scale Your Operations
+- Hire virtual assistants
+- Use automation tools
+- Create systems and processes
+- Build a team as you grow
+
+The creator economy rewards those who provide genuine value while building authentic relationships with their audience. Start where you are, use what you have, and do what you can. Your unique perspective is your greatest asset.
+
+Remember: Success in the creator economy isn't just about making money—it's about making a meaningful impact while building a sustainable business around your passions.`,
+        author: users[3]._id,
+        tags: ['creator-economy', 'monetization', 'content-strategy', 'entrepreneurship'],
+        image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
         status: 'published'
       },
       {
-        title: 'CSS Grid vs Flexbox: When to Use Which',
-        body: `CSS Grid and Flexbox are both powerful layout systems in CSS, but they serve different purposes. Understanding when to use each can dramatically improve your web layouts.
+        title: 'Sustainable Living: Small Changes, Big Impact',
+        body: `Living sustainably doesn't require drastic lifestyle changes. Small, consistent actions can create significant environmental impact while improving your quality of life and saving money.
 
-## Flexbox: The One-Dimensional Layout
+## Why Sustainable Living Matters
 
-Flexbox is designed for one-dimensional layouts - either a row or a column. It's perfect for:
+Climate change, resource depletion, and environmental degradation affect us all. Individual actions, when multiplied across millions of people, create powerful collective change.
 
-- Navigation bars
-- Button groups
-- Centering content
-- Equal-height columns
-- Space distribution
+### Environmental Benefits
+- Reduced carbon footprint
+- Conservation of natural resources
+- Decreased waste production
+- Protection of biodiversity
 
-### Basic Flexbox Example
+### Personal Benefits
+- Lower utility bills and expenses
+- Improved health and wellbeing
+- Greater connection with nature
+- Sense of purpose and contribution
 
-\`\`\`css
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+## Easy Swaps for Beginners
 
-.item {
-  flex: 1;
-}
-\`\`\`
+### In the Kitchen
+- **Reusable water bottles** instead of single-use plastic
+- **Cloth shopping bags** for grocery trips
+- **Glass containers** for food storage
+- **Compost bin** for organic waste
 
-## CSS Grid: The Two-Dimensional Layout
+### Energy Efficiency
+- **LED light bulbs** - last longer, use less energy
+- **Smart thermostats** - optimize heating and cooling
+- **Unplug devices** when not in use
+- **Air-dry clothes** instead of using the dryer
 
-CSS Grid is designed for two-dimensional layouts - rows and columns at the same time. It's ideal for:
+### Transportation Choices
+- **Walk or bike** for short distances
+- **Public transportation** for longer trips
+- **Carpooling** with friends and colleagues
+- **Remote work** when possible
 
-- Page layouts
-- Card layouts
-- Complex grids
-- Overlapping elements
+## The 30-Day Sustainability Challenge
 
-### Basic Grid Example
+Week 1: **Reduce**
+- Audit your consumption habits
+- Identify areas for reduction
+- Start saying no to unnecessary purchases
+- Focus on using what you already have
 
-\`\`\`css
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-\`\`\`
+Week 2: **Reuse**
+- Find new purposes for old items
+- Repair instead of replacing
+- Share or borrow items you rarely use
+- Get creative with repurposing projects
 
-## When to Use Which?
+Week 3: **Recycle**
+- Learn your local recycling guidelines
+- Set up proper sorting systems
+- Find specialized recycling for electronics
+- Participate in community recycling events
 
-### Use Flexbox When:
-- You need to align items in a single direction
-- Content size should determine layout
-- You need equal spacing between items
-- Building components rather than layouts
+Week 4: **Reflect and Plan**
+- Assess your progress
+- Identify what worked best
+- Plan long-term sustainable habits
+- Share your journey with others
 
-### Use CSS Grid When:
-- You need a two-dimensional layout
-- Layout should determine content size
-- You need precise placement of items
-- Building page layouts
+## Building Sustainable Habits
 
-## Can You Use Both?
+### Start Small
+- Choose one area to focus on initially
+- Make changes gradually
+- Celebrate small victories
+- Don't aim for perfection
 
-Absolutely! Grid and Flexbox work great together:
+### Track Your Progress
+- Monitor utility bills for savings
+- Keep a sustainability journal
+- Take photos of your changes
+- Share milestones with friends
 
-\`\`\`css
-.page-layout {
-  display: grid;
-  grid-template-areas: 
-    "header header header"
-    "sidebar main aside"
-    "footer footer footer";
-}
+### Find Your Community
+- Join local environmental groups
+- Connect with like-minded individuals online
+- Participate in community gardens
+- Attend sustainability workshops
 
-.navigation {
-  display: flex;
-  justify-content: space-between;
-}
-\`\`\`
+## Sustainable Technology Use
 
-The key is understanding that these tools complement each other rather than compete.`,
-        author: users[0]._id,
-        tags: ['css', 'grid', 'flexbox', 'layout'],
-        image: 'https://images.pexels.com/photos/270632/pexels-photo-270632.jpeg?auto=compress&cs=tinysrgb&w=800',
+### Digital Minimalism
+- Unsubscribe from unnecessary emails
+- Delete unused apps and files
+- Use cloud storage efficiently
+- Choose energy-efficient devices
+
+### Mindful Consumption
+- Research brands' sustainability practices
+- Buy quality items that last longer
+- Support companies with environmental missions
+- Consider the full lifecycle of products
+
+## Making It Stick
+
+### Habit Stacking
+Attach new sustainable behaviors to existing habits:
+- Turn off lights when leaving a room
+- Bring reusable bags when going shopping
+- Check for leaks during monthly bill reviews
+- Plan sustainable meals during weekly prep
+
+### Financial Motivation
+Track the money you save through sustainable practices:
+- Lower energy bills
+- Reduced shopping expenses
+- Savings from growing your own food
+- Health benefits reducing medical costs
+
+## Beyond Individual Action
+
+While personal choices matter, systemic change is equally important:
+- Vote for environmentally conscious leaders
+- Support sustainable businesses
+- Advocate for policy changes
+- Educate others about sustainability
+
+Remember, sustainable living is a journey, not a destination. Every small action contributes to a larger movement toward environmental responsibility. Start today, start small, but start somewhere.
+
+Your future self—and the planet—will thank you.`,
+        author: users[1]._id,
+        tags: ['sustainability', 'environment', 'lifestyle', 'green-living'],
+        image: 'https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=800',
         status: 'published'
       }
     ];
@@ -292,27 +537,27 @@ The key is understanding that these tools complement each other rather than comp
     }
 
     // Update users' post counts
-    await User.findByIdAndUpdate(users[0]._id, { postsCount: 2 });
-    await User.findByIdAndUpdate(users[1]._id, { postsCount: 1 });
+    await User.findByIdAndUpdate(users[0]._id, { postsCount: 1 });
+    await User.findByIdAndUpdate(users[1]._id, { postsCount: 2 });
     await User.findByIdAndUpdate(users[2]._id, { postsCount: 1 });
+    await User.findByIdAndUpdate(users[3]._id, { postsCount: 1 });
 
     console.log('Created sample posts');
 
     // Create some follows
     await User.findByIdAndUpdate(users[0]._id, {
-      $push: { following: users[1]._id },
-      $inc: { followingCount: 1 }
+      $push: { following: [users[1]._id, users[2]._id] },
+      $inc: { followingCount: 2 }
     });
     await User.findByIdAndUpdate(users[1]._id, {
-      $push: { followers: users[0]._id },
-      $inc: { followersCount: 1 }
-    });
-
-    await User.findByIdAndUpdate(users[1]._id, {
-      $push: { following: users[2]._id },
-      $inc: { followingCount: 1 }
+      $push: { followers: users[0]._id, following: [users[2]._id, users[3]._id] },
+      $inc: { followersCount: 1, followingCount: 2 }
     });
     await User.findByIdAndUpdate(users[2]._id, {
+      $push: { followers: [users[0]._id, users[1]._id] },
+      $inc: { followersCount: 2 }
+    });
+    await User.findByIdAndUpdate(users[3]._id, {
       $push: { followers: users[1]._id },
       $inc: { followersCount: 1 }
     });
@@ -322,19 +567,29 @@ The key is understanding that these tools complement each other rather than comp
     // Create some comments
     const sampleComments = [
       {
-        body: 'Great article! React hooks have really simplified my components.',
+        body: 'Incredible insights on AI and creativity! This really changed my perspective on how to use these tools effectively.',
         author: users[1]._id,
         post: posts[0]._id
       },
       {
-        body: 'Thanks for sharing this. The useState example was particularly helpful.',
+        body: 'As a fellow creator, I can relate to everything you shared here. The authenticity crisis is real, and your solutions are spot-on.',
         author: users[2]._id,
-        post: posts[0]._id
+        post: posts[1]._id
       },
       {
-        body: 'Excellent overview of UX principles. The design thinking process section was spot on!',
+        body: 'Love the minimalist approach! Clean design really does improve user experience. Thanks for the practical tips.',
         author: users[0]._id,
-        post: posts[1]._id
+        post: posts[2]._id
+      },
+      {
+        body: 'This creator economy guide is pure gold! Bookmarking this for future reference. The monetization strategies are particularly helpful.',
+        author: users[1]._id,
+        post: posts[3]._id
+      },
+      {
+        body: 'Started implementing these sustainability tips last month and already seeing results! Small changes really do add up.',
+        author: users[3]._id,
+        post: posts[4]._id
       }
     ];
 
@@ -352,23 +607,39 @@ The key is understanding that these tools complement each other rather than comp
 
     // Add some likes to posts
     await Post.findByIdAndUpdate(posts[0]._id, {
-      $push: { likes: [{ user: users[1]._id }, { user: users[2]._id }] },
-      likesCount: 2
+      $push: { likes: [{ user: users[1]._id }, { user: users[2]._id }, { user: users[3]._id }] },
+      likesCount: 3
     });
 
     await Post.findByIdAndUpdate(posts[1]._id, {
-      $push: { likes: [{ user: users[0]._id }] },
+      $push: { likes: [{ user: users[0]._id }, { user: users[2]._id }] },
+      likesCount: 2
+    });
+
+    await Post.findByIdAndUpdate(posts[2]._id, {
+      $push: { likes: [{ user: users[0]._id }, { user: users[1]._id }] },
+      likesCount: 2
+    });
+
+    await Post.findByIdAndUpdate(posts[3]._id, {
+      $push: { likes: [{ user: users[1]._id }] },
       likesCount: 1
+    });
+
+    await Post.findByIdAndUpdate(posts[4]._id, {
+      $push: { likes: [{ user: users[0]._id }, { user: users[3]._id }] },
+      likesCount: 2
     });
 
     console.log('Added likes to posts');
 
     console.log('Seed data created successfully!');
     console.log('Sample accounts:');
-    console.log('Admin: admin@blog.com / admin123');
-    console.log('User 1: john@example.com / password123');
-    console.log('User 2: jane@example.com / password123');
-    console.log('User 3: mike@example.com / password123');
+    console.log('Admin: admin@blogsphere.com / admin123');
+    console.log('User 1: alex@example.com / password123');
+    console.log('User 2: maria@example.com / password123');
+    console.log('User 3: david@example.com / password123');
+    console.log('User 4: sophia@example.com / password123');
 
   } catch (error) {
     console.error('Error seeding data:', error);

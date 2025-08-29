@@ -47,11 +47,12 @@ const Login = () => {
       alignItems: 'center', 
       justifyContent: 'center' 
     }}>
-      <div className="form-container" style={{ width: '100%', maxWidth: '400px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-          <h1 className="form-title">Welcome Back</h1>
-          <p style={{ color: '#6c757d', fontSize: '16px' }}>
-            Sign in to your account to continue writing
+      <div className="form-container" style={{ width: '100%', maxWidth: '500px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <div style={{ fontSize: '80px', marginBottom: '24px' }}>✨</div>
+          <h1 className="form-title">Welcome Back Creator</h1>
+          <p style={{ color: '#6b7280', fontSize: '18px' }}>
+            Sign in to continue your storytelling journey
           </p>
         </div>
 
@@ -63,7 +64,7 @@ const Login = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="email" className="form-label">Email</label>
+            <label htmlFor="email" className="form-label">Email Address</label>
             <input
               type="email"
               id="email"
@@ -71,7 +72,7 @@ const Login = () => {
               value={formData.email}
               onChange={handleChange}
               className="form-input"
-              placeholder="Enter your email"
+              placeholder="Enter your email address"
               required
               autoComplete="email"
             />
@@ -96,69 +97,69 @@ const Login = () => {
             type="submit"
             className="btn btn-primary"
             disabled={loading}
-            style={{ width: '100%', marginBottom: '20px' }}
+            style={{ width: '100%', marginBottom: '24px' }}
           >
-            {loading ? 'Signing in...' : 'Sign In'}
+            {loading ? '✨ Signing you in...' : '🚀 Sign In'}
           </button>
         </form>
 
         <div style={{ textAlign: 'center' }}>
-          <p style={{ color: '#6c757d', marginBottom: '16px' }}>
-            Don't have an account?{' '}
+          <p style={{ color: '#6b7280', marginBottom: '20px' }}>
+            New to BlogSphere?{' '}
             <Link 
               to="/register" 
               style={{ 
-                color: '#667eea', 
+                color: '#10b981', 
                 textDecoration: 'none', 
                 fontWeight: '600' 
               }}
             >
-              Sign up here
+              Join our community
             </Link>
           </p>
         </div>
 
         {/* Demo Accounts */}
         <div style={{
-          marginTop: '32px',
-          padding: '20px',
-          background: '#f8f9fa',
-          borderRadius: '8px',
-          border: '1px solid #e9ecef'
+          marginTop: '40px',
+          padding: '28px',
+          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)',
+          borderRadius: '20px',
+          border: '2px solid rgba(16, 185, 129, 0.2)'
         }}>
           <h4 style={{ 
-            fontSize: '14px', 
-            fontWeight: '600', 
-            marginBottom: '12px',
-            color: '#495057'
+            fontSize: '16px', 
+            fontWeight: '700', 
+            marginBottom: '16px',
+            color: '#064e3b'
           }}>
-            💡 Demo Accounts
+            🎭 Try Demo Accounts
           </h4>
-          <div style={{ fontSize: '13px', color: '#6c757d', lineHeight: '1.5' }}>
-            <p style={{ marginBottom: '8px' }}>
-              <strong>Admin:</strong> admin@blog.com / admin123
+          <div style={{ fontSize: '14px', color: '#065f46', lineHeight: '1.6' }}>
+            <p style={{ marginBottom: '12px' }}>
+              <strong>Admin:</strong> admin@blogsphere.com / admin123
             </p>
-            <p style={{ marginBottom: '8px' }}>
-              <strong>User:</strong> john@example.com / password123
+            <p style={{ marginBottom: '12px' }}>
+              <strong>Creator:</strong> alex@example.com / password123
             </p>
-            <p style={{ margin: 0, fontSize: '12px', fontStyle: 'italic' }}>
-              Use these credentials to explore all features
+            <p style={{ margin: 0, fontSize: '13px', fontStyle: 'italic' }}>
+              Explore all features with these pre-configured accounts
             </p>
           </div>
         </div>
 
         <div style={{ 
           textAlign: 'center', 
-          marginTop: '32px', 
-          paddingTop: '20px',
-          borderTop: '1px solid #e9ecef'
+          marginTop: '40px', 
+          paddingTop: '24px',
+          borderTop: '1px solid rgba(16, 185, 129, 0.2)'
         }}>
           <Link 
             to="/"
             style={{ 
-              color: '#6c757d', 
+              color: '#6b7280', 
               textDecoration: 'none',
-              fontSize: '14px'
+              fontSize: '15px'
             }}
           >
             ← Back to Home

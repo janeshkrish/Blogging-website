@@ -58,21 +58,21 @@ const Home = () => {
 
   if (loading && page === 1) {
     return (
-      <div className="container" style={{ paddingTop: '40px' }}>
-        <div style={{ display: 'grid', gap: '24px' }}>
+      <div className="container" style={{ paddingTop: '60px' }}>
+        <div style={{ display: 'grid', gap: '32px' }}>
           {[...Array(5)].map((_, i) => (
-            <div key={i} className="card" style={{ padding: '24px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '16px' }}>
+            <div key={i} className="card" style={{ padding: '32px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
                 <div className="skeleton skeleton-avatar"></div>
                 <div style={{ flex: 1 }}>
-                  <div className="skeleton skeleton-text" style={{ width: '120px' }}></div>
-                  <div className="skeleton skeleton-text" style={{ width: '80px' }}></div>
+                  <div className="skeleton skeleton-text" style={{ width: '140px' }}></div>
+                  <div className="skeleton skeleton-text" style={{ width: '100px' }}></div>
                 </div>
               </div>
               <div className="skeleton skeleton-title"></div>
               <div className="skeleton skeleton-text"></div>
               <div className="skeleton skeleton-text"></div>
-              <div className="skeleton skeleton-text" style={{ width: '60%' }}></div>
+              <div className="skeleton skeleton-text" style={{ width: '70%' }}></div>
             </div>
           ))}
         </div>
@@ -81,66 +81,66 @@ const Home = () => {
   }
 
   return (
-    <div className="container" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+    <div className="container" style={{ paddingTop: '60px', paddingBottom: '60px' }}>
       {/* Hero Section */}
       {!user && (
         <div style={{
-          background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
+          background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
           color: 'white',
-          borderRadius: '28px',
-          padding: '100px 60px',
+          borderRadius: '36px',
+          padding: '140px 100px',
           textAlign: 'center',
-          marginBottom: '80px',
+          marginBottom: '100px',
           position: 'relative',
           overflow: 'hidden',
-          boxShadow: '0 25px 50px rgba(34, 197, 94, 0.3)'
+          boxShadow: '0 35px 70px rgba(16, 185, 129, 0.4)'
         }}>
           <div style={{ position: 'relative', zIndex: 2 }}>
             <h1 style={{ 
-              fontSize: '64px', 
+              fontSize: '72px', 
               fontWeight: '800', 
-              marginBottom: '28px',
+              marginBottom: '32px',
               lineHeight: '1.1',
-              fontFamily: 'Poppins, sans-serif',
+              fontFamily: 'Inter, sans-serif',
               letterSpacing: '-0.02em'
             }}>
-              Write for Tomorrow
+              Your Stories Matter
             </h1>
             <p style={{ 
-              fontSize: '24px', 
-              marginBottom: '48px', 
+              fontSize: '26px', 
+              marginBottom: '56px', 
               opacity: 0.9,
-              maxWidth: '800px',
-              margin: '0 auto 48px',
+              maxWidth: '900px',
+              margin: '0 auto 56px',
               lineHeight: '1.7',
-              fontFamily: 'Merriweather, serif'
+              fontFamily: 'Crimson Text, serif'
             }}>
-              Join a sustainable community of eco-conscious writers, environmental advocates, 
-              and green innovators sharing ideas for a better planet.
+              Join millions of creators, thought leaders, and storytellers sharing their 
+              unique perspectives. Build your audience, monetize your content, and make an impact.
             </p>
-            <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', gap: '28px', justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link to="/register" className="btn" style={{ 
                 background: 'white', 
-                color: '#22c55e', 
+                color: '#10b981', 
                 textDecoration: 'none',
-                fontSize: '17px',
-                fontWeight: '600',
-                padding: '18px 36px',
-                borderRadius: '16px',
-                boxShadow: '0 4px 15px rgba(255, 255, 255, 0.2)'
+                fontSize: '18px',
+                fontWeight: '700',
+                padding: '20px 40px',
+                borderRadius: '20px',
+                boxShadow: '0 6px 20px rgba(255, 255, 255, 0.3)'
               }}>
-                🌱 Start Growing
+                ✨ Start Creating
               </Link>
               <Link to="/search" className="btn btn-outline" style={{ 
                 color: 'white', 
                 borderColor: 'white',
                 textDecoration: 'none',
-                padding: '18px 36px',
-                borderRadius: '16px',
-                backdropFilter: 'blur(10px)',
-                background: 'rgba(255, 255, 255, 0.1)'
+                padding: '20px 40px',
+                borderRadius: '20px',
+                backdropFilter: 'blur(15px)',
+                background: 'rgba(255, 255, 255, 0.15)'
               }}>
-                🔍 Explore Content
+                🔍 Discover Stories
               </Link>
             </div>
           </div>
@@ -151,7 +151,7 @@ const Home = () => {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M50 30c11.046 0 20 8.954 20 20s-8.954 20-20 20-20-8.954-20-20 8.954-20 20-20zm0 5c-8.284 0-15 6.716-15 15s6.716 15 15 15 15-6.716 15-15-6.716-15-15-15z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M60 35c13.807 0 25 11.193 25 25s-11.193 25-25 25-25-11.193-25-25 11.193-25 25-25zm0 6c-10.493 0-19 8.507-19 19s8.507 19 19 19 19-8.507 19-19-8.507-19-19-19z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
             opacity: 0.4
           }}></div>
         </div>
@@ -159,8 +159,8 @@ const Home = () => {
 
       <div style={{ 
         display: 'grid', 
-        gridTemplateColumns: '1fr 400px', 
-        gap: '60px',
+        gridTemplateColumns: '1fr 450px', 
+        gap: '80px',
         alignItems: 'flex-start'
       }}>
         {/* Main Content */}
@@ -170,66 +170,66 @@ const Home = () => {
             display: 'flex', 
             alignItems: 'center', 
             justifyContent: 'space-between',
-            marginBottom: '48px',
+            marginBottom: '60px',
             flexWrap: 'wrap',
-            gap: '24px'
+            gap: '28px'
           }}>
             <h2 style={{ 
-              fontSize: '36px', 
+              fontSize: '42px', 
               fontWeight: '800', 
-              color: '#1a202c',
-              fontFamily: 'Poppins, sans-serif',
+              color: '#064e3b',
+              fontFamily: 'Inter, sans-serif',
               margin: 0
             }}>
-              🌿 Green Stories
+              ✨ Featured Stories
             </h2>
             
-            <div style={{ display: 'flex', gap: '16px' }}>
+            <div style={{ display: 'flex', gap: '20px' }}>
               <button
                 onClick={() => handleSortChange('createdAt')}
                 className={`btn btn-sm ${sortBy === 'createdAt' ? 'btn-primary' : 'btn-outline'}`}
               >
-                🌱 Fresh
+                🆕 Latest
               </button>
               <button
                 onClick={() => handleSortChange('likesCount')}
                 className={`btn btn-sm ${sortBy === 'likesCount' ? 'btn-primary' : 'btn-outline'}`}
               >
-                💚 Loved
+                💖 Popular
               </button>
               <button
                 onClick={() => handleSortChange('views')}
                 className={`btn btn-sm ${sortBy === 'views' ? 'btn-primary' : 'btn-outline'}`}
               >
-                🌟 Trending
+                🔥 Trending
               </button>
             </div>
           </div>
 
           {/* Posts List */}
-          <div style={{ display: 'grid', gap: '36px' }}>
+          <div style={{ display: 'grid', gap: '40px' }}>
             {posts.length === 0 ? (
               <div style={{
                 textAlign: 'center',
-                padding: '100px 24px',
+                padding: '120px 32px',
                 color: '#6b7280'
               }}>
-                <div style={{ fontSize: '96px', marginBottom: '32px' }}>🌱</div>
+                <div style={{ fontSize: '120px', marginBottom: '40px' }}>✨</div>
                 <h3 style={{ 
-                  marginBottom: '20px', 
-                  color: '#374151',
-                  fontSize: '28px',
-                  fontFamily: 'Poppins, sans-serif'
-                }}>No green stories yet</h3>
-                <p style={{ fontSize: '18px', marginBottom: '32px' }}>
-                  Be the first to plant seeds of change with your writing!
+                  marginBottom: '24px', 
+                  color: '#065f46',
+                  fontSize: '32px',
+                  fontFamily: 'Inter, sans-serif'
+                }}>No stories yet</h3>
+                <p style={{ fontSize: '20px', marginBottom: '40px' }}>
+                  Be the first to share your amazing story with the world!
                 </p>
                 {user && (
                   <Link to="/create" className="btn btn-primary" style={{ 
                     textDecoration: 'none',
-                    padding: '18px 36px'
+                    padding: '20px 40px'
                   }}>
-                    🌱 Plant Your First Story
+                    ✨ Create Your First Story
                   </Link>
                 )}
               </div>
@@ -248,14 +248,14 @@ const Home = () => {
                 ))}
 
                 {hasMore && (
-                  <div style={{ textAlign: 'center', marginTop: '48px' }}>
+                  <div style={{ textAlign: 'center', marginTop: '60px' }}>
                     <button
                       onClick={handleLoadMore}
                       className="btn btn-outline"
                       disabled={loading}
-                      style={{ padding: '18px 36px' }}
+                      style={{ padding: '20px 40px' }}
                     >
-                      {loading ? '🌱 Growing...' : '🌿 Discover More'}
+                      {loading ? '✨ Loading Magic...' : '📚 Load More Stories'}
                     </button>
                   </div>
                 )}
@@ -269,24 +269,24 @@ const Home = () => {
           {/* User Welcome Card */}
           {user && (
             <div className="sidebar-card">
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '20px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '24px' }}>
                 <img
-                  src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=22c55e&color=fff`}
+                  src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=10b981&color=fff`}
                   alt={user.username}
                   className="avatar avatar-lg"
                 />
                 <div>
                   <h4 style={{ 
                     margin: 0, 
-                    fontSize: '20px', 
+                    fontSize: '22px', 
                     fontWeight: '800',
-                    color: '#1a202c',
-                    fontFamily: 'Poppins, sans-serif'
+                    color: '#064e3b',
+                    fontFamily: 'Inter, sans-serif'
                   }}>
-                    Welcome back, {user.username}! 🌱
+                    Welcome back, {user.username}! ✨
                   </h4>
-                  <p style={{ margin: 0, fontSize: '15px', color: '#6b7280' }}>
-                    Ready to grow your green impact?
+                  <p style={{ margin: 0, fontSize: '16px', color: '#6b7280' }}>
+                    Ready to inspire the world?
                   </p>
                 </div>
               </div>
@@ -294,9 +294,9 @@ const Home = () => {
                 textDecoration: 'none',
                 width: '100%',
                 justifyContent: 'center',
-                padding: '18px'
+                padding: '20px'
               }}>
-                🌱 Plant New Story
+                ✍️ Write New Story
               </Link>
             </div>
           )}
@@ -304,18 +304,18 @@ const Home = () => {
           {/* Trending Tags */}
           <div className="sidebar-card">
             <h3 style={{ 
-              fontSize: '22px', 
+              fontSize: '24px', 
               fontWeight: '800', 
-              marginBottom: '24px',
-              color: '#1a202c',
-              fontFamily: 'Poppins, sans-serif'
+              marginBottom: '28px',
+              color: '#064e3b',
+              fontFamily: 'Inter, sans-serif'
             }}>
-              🌟 Trending Green Topics
+              🔥 Trending Topics
             </h3>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px' }}>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
               {trendingTags.length === 0 ? (
-                <p style={{ color: '#6b7280', fontSize: '15px', margin: 0 }}>
-                  No trending tags yet
+                <p style={{ color: '#6b7280', fontSize: '16px', margin: 0 }}>
+                  No trending topics yet
                 </p>
               ) : (
                 trendingTags.map((tag) => (
@@ -327,8 +327,8 @@ const Home = () => {
                   >
                     #{tag.name}
                     <span style={{ 
-                      marginLeft: '6px', 
-                      fontSize: '11px', 
+                      marginLeft: '8px', 
+                      fontSize: '12px', 
                       opacity: 0.7 
                     }}>
                       ({tag.count})
@@ -339,29 +339,122 @@ const Home = () => {
             </div>
           </div>
 
+          {/* Creator Spotlight */}
+          <div className="sidebar-card">
+            <h3 style={{ 
+              fontSize: '24px', 
+              fontWeight: '800', 
+              marginBottom: '28px',
+              color: '#064e3b',
+              fontFamily: 'Inter, sans-serif'
+            }}>
+              🌟 Creator Spotlight
+            </h3>
+            <div style={{ 
+              background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)',
+              borderRadius: '20px',
+              padding: '24px',
+              border: '1px solid rgba(16, 185, 129, 0.2)'
+            }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '16px' }}>
+                <img
+                  src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200"
+                  alt="Featured Creator"
+                  className="avatar avatar-md"
+                />
+                <div>
+                  <h4 style={{ margin: 0, fontSize: '18px', fontWeight: '700', color: '#064e3b' }}>
+                    Sarah Chen
+                  </h4>
+                  <p style={{ margin: 0, fontSize: '14px', color: '#6b7280' }}>
+                    Tech Innovator & Writer
+                  </p>
+                </div>
+              </div>
+              <p style={{ 
+                color: '#065f46', 
+                fontSize: '15px', 
+                lineHeight: '1.6',
+                margin: '0 0 16px 0'
+              }}>
+                "Building the future through code and creativity. Join me on this incredible journey!"
+              </p>
+              <Link to="/user/sarahchen" className="btn btn-sm btn-outline" style={{ 
+                textDecoration: 'none',
+                width: '100%',
+                justifyContent: 'center'
+              }}>
+                Follow Sarah
+              </Link>
+            </div>
+          </div>
+
           {/* Writing Tips */}
           <div className="sidebar-card">
             <h3 style={{ 
-              fontSize: '22px', 
+              fontSize: '24px', 
               fontWeight: '800', 
-              marginBottom: '24px',
-              color: '#1a202c',
-              fontFamily: 'Poppins, sans-serif'
+              marginBottom: '28px',
+              color: '#064e3b',
+              fontFamily: 'Inter, sans-serif'
             }}>
-              🌱 Green Writing Tips
+              💡 Creator Tips
             </h3>
             <ul style={{ 
               margin: 0, 
-              paddingLeft: '24px', 
+              paddingLeft: '28px', 
               color: '#6b7280',
-              fontSize: '15px',
+              fontSize: '16px',
               lineHeight: '1.8'
             }}>
-              <li style={{ marginBottom: '12px' }}>🌿 Write about sustainable living and eco-friendly practices</li>
-              <li style={{ marginBottom: '12px' }}>♻️ Share innovative green solutions and technologies</li>
-              <li style={{ marginBottom: '12px' }}>🌍 Inspire environmental awareness through storytelling</li>
-              <li>💚 Build a community focused on positive change</li>
+              <li style={{ marginBottom: '14px' }}>✨ Craft compelling headlines that grab attention</li>
+              <li style={{ marginBottom: '14px' }}>📸 Use high-quality visuals to enhance your stories</li>
+              <li style={{ marginBottom: '14px' }}>🎯 Write consistently to build your audience</li>
+              <li style={{ marginBottom: '14px' }}>💬 Engage with your readers through comments</li>
+              <li>🚀 Share your content across social platforms</li>
             </ul>
+          </div>
+
+          {/* Newsletter Signup */}
+          <div className="sidebar-card" style={{
+            background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)',
+            border: '2px solid rgba(16, 185, 129, 0.3)'
+          }}>
+            <h3 style={{ 
+              fontSize: '24px', 
+              fontWeight: '800', 
+              marginBottom: '20px',
+              color: '#064e3b',
+              fontFamily: 'Inter, sans-serif'
+            }}>
+              📧 Stay Updated
+            </h3>
+            <p style={{ 
+              color: '#065f46', 
+              fontSize: '16px', 
+              marginBottom: '24px',
+              lineHeight: '1.6'
+            }}>
+              Get the best stories and creator insights delivered to your inbox weekly.
+            </p>
+            <div style={{ display: 'flex', gap: '12px' }}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="form-input"
+                style={{ 
+                  flex: 1,
+                  padding: '14px 20px',
+                  fontSize: '14px'
+                }}
+              />
+              <button className="btn btn-primary" style={{ 
+                padding: '14px 20px',
+                fontSize: '14px'
+              }}>
+                Subscribe
+              </button>
+            </div>
           </div>
         </aside>
       </div>

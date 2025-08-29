@@ -23,12 +23,12 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <div className="navbar-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 0' }}>
+        <div className="navbar-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 0' }}>
           <Link to="/" className="navbar-brand">
-            🌱 GreenBlog
+            ✨ BlogSphere
           </Link>
           
-          <div className="navbar-desktop" style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
+          <div className="navbar-desktop" style={{ display: 'flex', alignItems: 'center', gap: '36px' }}>
             {/* Desktop Navigation */}
             <ul className="navbar-nav" style={{ display: window.innerWidth > 768 ? 'flex' : 'none' }}>
               <li>
@@ -36,7 +36,7 @@ const Navbar = () => {
                   to="/" 
                   className={`nav-link ${isActive('/') ? 'active' : ''}`}
                 >
-                  🌿 Explore
+                  🏠 Discover
                 </Link>
               </li>
               <li>
@@ -44,7 +44,7 @@ const Navbar = () => {
                   to="/search" 
                   className={`nav-link ${isActive('/search') ? 'active' : ''}`}
                 >
-                  🔍 Search
+                  🔍 Explore
                 </Link>
               </li>
               
@@ -55,7 +55,7 @@ const Navbar = () => {
                       to="/create" 
                       className={`nav-link ${isActive('/create') ? 'active' : ''}`}
                     >
-                      ✨ Create
+                      ✍️ Write
                     </Link>
                   </li>
                   <li style={{ position: 'relative' }}>
@@ -64,24 +64,24 @@ const Navbar = () => {
                       className={`nav-link ${isActive('/notifications') ? 'active' : ''}`}
                       style={{ position: 'relative' }}
                     >
-                      🔔 Updates
+                      🔔 Activity
                       {unreadCount > 0 && (
                         <span 
                           style={{
                             position: 'absolute',
-                            top: '-6px',
-                            right: '-6px',
+                            top: '-8px',
+                            right: '-8px',
                             background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
                             color: 'white',
                             borderRadius: '50%',
-                            width: '22px',
-                            height: '22px',
+                            width: '24px',
+                            height: '24px',
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            fontSize: '11px',
+                            fontSize: '12px',
                             fontWeight: '700',
-                            boxShadow: '0 2px 8px rgba(239, 68, 68, 0.4)'
+                            boxShadow: '0 4px 12px rgba(239, 68, 68, 0.5)'
                           }}
                         >
                           {unreadCount > 99 ? '99+' : unreadCount}
@@ -95,12 +95,12 @@ const Navbar = () => {
                       className={`nav-link ${isActive('/profile') ? 'active' : ''}`}
                     >
                       <img 
-                        src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=667eea&color=fff`}
+                        src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=10b981&color=fff`}
                         alt={user.username}
                         className="avatar avatar-sm"
-                        style={{ marginRight: '10px' }}
+                        style={{ marginRight: '12px' }}
                       />
-                      Account
+                      Profile
                     </Link>
                   </li>
                   <li>
@@ -113,7 +113,7 @@ const Navbar = () => {
                         cursor: 'pointer'
                       }}
                     >
-                      🚪 Sign Out
+                      🚪 Logout
                     </button>
                   </li>
                 </>
@@ -124,7 +124,7 @@ const Navbar = () => {
                       to="/login" 
                       className={`nav-link ${isActive('/login') ? 'active' : ''}`}
                     >
-                      🔑 Login
+                      🔑 Sign In
                     </Link>
                   </li>
                   <li>
@@ -133,11 +133,11 @@ const Navbar = () => {
                       className="btn btn-primary"
                       style={{ 
                         textDecoration: 'none',
-                        padding: '12px 24px',
-                        borderRadius: '12px'
+                        padding: '14px 28px',
+                        borderRadius: '16px'
                       }}
                     >
-                      🌱 Join Community
+                      ✨ Join Now
                     </Link>
                   </li>
                 </>
@@ -152,11 +152,11 @@ const Navbar = () => {
                 display: window.innerWidth <= 768 ? 'block' : 'none',
                 background: 'none',
                 border: 'none',
-                fontSize: '28px',
+                fontSize: '32px',
                 cursor: 'pointer',
-                color: '#4a5568',
-                padding: '8px',
-                borderRadius: '8px',
+                color: '#065f46',
+                padding: '10px',
+                borderRadius: '12px',
                 transition: 'all 0.3s ease'
               }}
             >
@@ -167,48 +167,46 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div 
-            className="mobile-nav"
-          >
+          <div className="mobile-nav">
             <ul style={{ listStyle: 'none', margin: 0, padding: 0 }}>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: '16px' }}>
                 <Link 
                   to="/" 
                   className={`nav-link ${isActive('/') ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  🌿 Explore
+                  🏠 Discover
                 </Link>
               </li>
-              <li style={{ marginBottom: '12px' }}>
+              <li style={{ marginBottom: '16px' }}>
                 <Link 
                   to="/search" 
                   className={`nav-link ${isActive('/search') ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  🔍 Search
+                  🔍 Explore
                 </Link>
               </li>
               
               {user ? (
                 <>
-                  <li style={{ marginBottom: '12px' }}>
+                  <li style={{ marginBottom: '16px' }}>
                     <Link 
                       to="/create" 
                       className={`nav-link ${isActive('/create') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      ✨ Create
+                      ✍️ Write
                     </Link>
                   </li>
-                  <li style={{ marginBottom: '12px' }}>
+                  <li style={{ marginBottom: '16px' }}>
                     <Link 
                       to="/notifications" 
                       className={`nav-link ${isActive('/notifications') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
-                      style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
+                      style={{ display: 'flex', alignItems: 'center', gap: '10px' }}
                     >
-                      🔔 Updates
+                      🔔 Activity
                       {unreadCount > 0 && (
                         <span className="badge badge-primary">
                           {unreadCount > 99 ? '99+' : unreadCount}
@@ -216,19 +214,19 @@ const Navbar = () => {
                       )}
                     </Link>
                   </li>
-                  <li style={{ marginBottom: '12px' }}>
+                  <li style={{ marginBottom: '16px' }}>
                     <Link 
                       to="/profile" 
                       className={`nav-link ${isActive('/profile') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <img 
-                        src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=22c55e&color=fff`}
+                        src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=10b981&color=fff`}
                         alt={user.username}
                         className="avatar avatar-sm"
-                        style={{ marginRight: '10px' }}
+                        style={{ marginRight: '12px' }}
                       />
-                      Account
+                      Profile
                     </Link>
                   </li>
                   <li>
@@ -243,19 +241,19 @@ const Navbar = () => {
                         cursor: 'pointer'
                       }}
                     >
-                      🚪 Sign Out
+                      🚪 Logout
                     </button>
                   </li>
                 </>
               ) : (
                 <>
-                  <li style={{ marginBottom: '12px' }}>
+                  <li style={{ marginBottom: '16px' }}>
                     <Link 
                       to="/login" 
                       className={`nav-link ${isActive('/login') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      🔑 Login
+                      🔑 Sign In
                     </Link>
                   </li>
                   <li>
@@ -267,11 +265,11 @@ const Navbar = () => {
                         textDecoration: 'none',
                         display: 'block',
                         textAlign: 'center',
-                        padding: '16px',
-                        borderRadius: '12px'
+                        padding: '18px',
+                        borderRadius: '16px'
                       }}
                     >
-                      🌱 Join Community
+                      ✨ Join Now
                     </Link>
                   </li>
                 </>
