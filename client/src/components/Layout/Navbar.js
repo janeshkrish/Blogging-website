@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="container">
         <div className="navbar-content" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '20px 0' }}>
           <Link to="/" className="navbar-brand">
-            ✨ StoryHub
+            🌱 GreenBlog
           </Link>
           
           <div className="navbar-desktop" style={{ display: 'flex', alignItems: 'center', gap: '32px' }}>
@@ -36,7 +36,7 @@ const Navbar = () => {
                   to="/" 
                   className={`nav-link ${isActive('/') ? 'active' : ''}`}
                 >
-                  🏠 Home
+                  🌿 Explore
                 </Link>
               </li>
               <li>
@@ -44,7 +44,7 @@ const Navbar = () => {
                   to="/search" 
                   className={`nav-link ${isActive('/search') ? 'active' : ''}`}
                 >
-                  🔍 Discover
+                  🔍 Search
                 </Link>
               </li>
               
@@ -55,7 +55,7 @@ const Navbar = () => {
                       to="/create" 
                       className={`nav-link ${isActive('/create') ? 'active' : ''}`}
                     >
-                      ✍️ Write
+                      ✨ Create
                     </Link>
                   </li>
                   <li style={{ position: 'relative' }}>
@@ -64,14 +64,14 @@ const Navbar = () => {
                       className={`nav-link ${isActive('/notifications') ? 'active' : ''}`}
                       style={{ position: 'relative' }}
                     >
-                      🔔 Notifications
+                      🔔 Updates
                       {unreadCount > 0 && (
                         <span 
                           style={{
                             position: 'absolute',
                             top: '-6px',
                             right: '-6px',
-                            background: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%)',
+                            background: 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)',
                             color: 'white',
                             borderRadius: '50%',
                             width: '22px',
@@ -81,7 +81,7 @@ const Navbar = () => {
                             justifyContent: 'center',
                             fontSize: '11px',
                             fontWeight: '700',
-                            boxShadow: '0 2px 8px rgba(255, 107, 107, 0.4)'
+                            boxShadow: '0 2px 8px rgba(239, 68, 68, 0.4)'
                           }}
                         >
                           {unreadCount > 99 ? '99+' : unreadCount}
@@ -100,7 +100,7 @@ const Navbar = () => {
                         className="avatar avatar-sm"
                         style={{ marginRight: '10px' }}
                       />
-                      Profile
+                      Account
                     </Link>
                   </li>
                   <li>
@@ -113,7 +113,7 @@ const Navbar = () => {
                         cursor: 'pointer'
                       }}
                     >
-                      🚪 Logout
+                      🚪 Sign Out
                     </button>
                   </li>
                 </>
@@ -124,7 +124,7 @@ const Navbar = () => {
                       to="/login" 
                       className={`nav-link ${isActive('/login') ? 'active' : ''}`}
                     >
-                      🔑 Sign In
+                      🔑 Login
                     </Link>
                   </li>
                   <li>
@@ -137,7 +137,7 @@ const Navbar = () => {
                         borderRadius: '12px'
                       }}
                     >
-                      ✨ Join Now
+                      🌱 Join Community
                     </Link>
                   </li>
                 </>
@@ -177,7 +177,7 @@ const Navbar = () => {
                   className={`nav-link ${isActive('/') ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  🏠 Home
+                  🌿 Explore
                 </Link>
               </li>
               <li style={{ marginBottom: '12px' }}>
@@ -186,7 +186,7 @@ const Navbar = () => {
                   className={`nav-link ${isActive('/search') ? 'active' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  🔍 Discover
+                  🔍 Search
                 </Link>
               </li>
               
@@ -198,7 +198,7 @@ const Navbar = () => {
                       className={`nav-link ${isActive('/create') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      ✍️ Write
+                      ✨ Create
                     </Link>
                   </li>
                   <li style={{ marginBottom: '12px' }}>
@@ -208,7 +208,7 @@ const Navbar = () => {
                       onClick={() => setIsMenuOpen(false)}
                       style={{ display: 'flex', alignItems: 'center', gap: '8px' }}
                     >
-                      🔔 Notifications
+                      🔔 Updates
                       {unreadCount > 0 && (
                         <span className="badge badge-primary">
                           {unreadCount > 99 ? '99+' : unreadCount}
@@ -223,12 +223,12 @@ const Navbar = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <img 
-                        src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=667eea&color=fff`}
+                        src={user.profilePicture || `https://ui-avatars.com/api/?name=${user.username}&background=22c55e&color=fff`}
                         alt={user.username}
                         className="avatar avatar-sm"
                         style={{ marginRight: '10px' }}
                       />
-                      Profile
+                      Account
                     </Link>
                   </li>
                   <li>
@@ -243,7 +243,7 @@ const Navbar = () => {
                         cursor: 'pointer'
                       }}
                     >
-                      🚪 Logout
+                      🚪 Sign Out
                     </button>
                   </li>
                 </>
@@ -255,7 +255,7 @@ const Navbar = () => {
                       className={`nav-link ${isActive('/login') ? 'active' : ''}`}
                       onClick={() => setIsMenuOpen(false)}
                     >
-                      🔑 Sign In
+                      🔑 Login
                     </Link>
                   </li>
                   <li>
@@ -271,7 +271,7 @@ const Navbar = () => {
                         borderRadius: '12px'
                       }}
                     >
-                      ✨ Join Now
+                      🌱 Join Community
                     </Link>
                   </li>
                 </>

@@ -55,7 +55,7 @@ const PostCard = ({ post, onUpdate }) => {
   return (
     <article className="post-card card">
       {post.image && (
-        <div style={{ width: '100%', height: '240px', overflow: 'hidden', borderRadius: '16px', marginBottom: '24px' }}>
+        <div style={{ width: '100%', height: '280px', overflow: 'hidden', borderRadius: '20px', marginBottom: '28px' }}>
           <img 
             src={post.image} 
             alt={post.title}
@@ -63,9 +63,9 @@ const PostCard = ({ post, onUpdate }) => {
               width: '100%', 
               height: '100%', 
               objectFit: 'cover',
-              transition: 'transform 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+              transition: 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
             }}
-            onMouseOver={(e) => e.target.style.transform = 'scale(1.08)'}
+            onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'}
             onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
           />
         </div>
@@ -73,9 +73,9 @@ const PostCard = ({ post, onUpdate }) => {
       
       <div className="post-card-content">
         <div className="post-card-header">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <img
-              src={post.author?.profilePicture || `https://ui-avatars.com/api/?name=${post.author?.username}&background=667eea&color=fff`}
+              src={post.author?.profilePicture || `https://ui-avatars.com/api/?name=${post.author?.username}&background=22c55e&color=fff`}
               alt={post.author?.username}
               className="avatar avatar-md"
             />
@@ -84,9 +84,9 @@ const PostCard = ({ post, onUpdate }) => {
                 to={`/user/${post.author?.username}`}
                 style={{ 
                   textDecoration: 'none', 
-                  color: '#4a5568', 
+                  color: '#374151', 
                   fontWeight: '600',
-                  fontSize: '15px',
+                  fontSize: '16px',
                   transition: 'color 0.3s ease'
                 }}
               >
@@ -100,10 +100,10 @@ const PostCard = ({ post, onUpdate }) => {
                 {post.status === 'draft' && (
                   <span className="badge" style={{ 
                     marginLeft: '12px', 
-                    background: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%)', 
+                    background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)', 
                     color: 'white',
-                    fontSize: '11px',
-                    padding: '4px 10px'
+                    fontSize: '12px',
+                    padding: '6px 12px'
                   }}>
                     Draft
                   </span>
@@ -146,13 +146,13 @@ const PostCard = ({ post, onUpdate }) => {
                 border: 'none',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px',
+                gap: '10px',
                 cursor: loading ? 'not-allowed' : 'pointer',
                 opacity: loading ? 0.6 : 1
               }}
             >
-              <span style={{ fontSize: '18px' }}>
-                {isLiked ? '❤️' : '🤍'}
+              <span style={{ fontSize: '20px' }}>
+                {isLiked ? '💚' : '🤍'}
               </span>
               <span>{likesCount}</span>
             </button>
@@ -162,24 +162,24 @@ const PostCard = ({ post, onUpdate }) => {
               className="post-action"
               style={{ textDecoration: 'none' }}
             >
-              <span style={{ fontSize: '18px' }}>💬</span>
+              <span style={{ fontSize: '20px' }}>💬</span>
               <span>{post.commentsCount || 0}</span>
             </Link>
 
             <div className="post-action">
-              <span style={{ fontSize: '18px' }}>👁️</span>
+              <span style={{ fontSize: '20px' }}>👁️</span>
               <span>{post.views || 0}</span>
             </div>
           </div>
 
           {user && user._id === post.author?._id && (
-            <div style={{ display: 'flex', gap: '12px' }}>
+            <div style={{ display: 'flex', gap: '16px' }}>
               <Link
                 to={`/edit/${post._id}`}
                 className="btn btn-sm btn-secondary"
                 style={{ textDecoration: 'none' }}
               >
-                Edit
+                ✏️ Edit
               </Link>
             </div>
           )}

@@ -20,13 +20,13 @@ const Footer = () => {
               fontSize: '28px', 
               fontWeight: '800',
               marginBottom: '20px',
-              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              background: 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              fontFamily: 'Playfair Display, serif'
+              fontFamily: 'Poppins, sans-serif'
             }}>
-              ✨ StoryHub
+              🌱 GreenBlog
             </h3>
             <p style={{ 
               color: 'rgba(255, 255, 255, 0.8)', 
@@ -34,8 +34,8 @@ const Footer = () => {
               marginBottom: '24px',
               fontSize: '15px'
             }}>
-              A vibrant community where storytellers, creators, and thought leaders 
-              share their unique perspectives and connect with engaged readers worldwide.
+              A sustainable blogging platform where eco-conscious writers, green innovators, 
+              and environmental advocates share insights about building a better tomorrow.
             </p>
             <div style={{ display: 'flex', gap: '20px' }}>
               <a href="#" style={{ 
@@ -51,7 +51,7 @@ const Footer = () => {
               }} onMouseOut={(e) => {
                 e.target.style.color = 'rgba(255, 255, 255, 0.7)';
                 e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-              }}>📧</a>
+              }}>🌍</a>
               <a href="#" style={{ 
                 color: 'rgba(255, 255, 255, 0.7)', 
                 fontSize: '24px',
@@ -65,7 +65,7 @@ const Footer = () => {
               }} onMouseOut={(e) => {
                 e.target.style.color = 'rgba(255, 255, 255, 0.7)';
                 e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-              }}>🐦</a>
+              }}>♻️</a>
               <a href="#" style={{ 
                 color: 'rgba(255, 255, 255, 0.7)', 
                 fontSize: '24px',
@@ -79,7 +79,7 @@ const Footer = () => {
               }} onMouseOut={(e) => {
                 e.target.style.color = 'rgba(255, 255, 255, 0.7)';
                 e.target.style.background = 'rgba(255, 255, 255, 0.1)';
-              }}>📱</a>
+              }}>🌱</a>
             </div>
           </div>
 
@@ -89,9 +89,9 @@ const Footer = () => {
               fontWeight: '700', 
               marginBottom: '20px',
               color: 'white',
-              fontFamily: 'Playfair Display, serif'
+              fontFamily: 'Poppins, sans-serif'
             }}>
-              🚀 Platform
+              🌱 Platform
             </h4>
             <ul style={{ 
               listStyle: 'none', 
@@ -105,11 +105,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  How it works
+                  Sustainable Writing
                 </a>
               </li>
               <li style={{ marginBottom: '12px' }}>
@@ -119,11 +119,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Features
+                  Green Features
                 </a>
               </li>
               <li style={{ marginBottom: '12px' }}>
@@ -133,11 +133,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Pricing
+                  Community
                 </a>
               </li>
               <li>
@@ -147,11 +147,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  API Documentation
+                  Eco Guidelines
                 </a>
               </li>
             </ul>
@@ -163,9 +163,9 @@ const Footer = () => {
               fontWeight: '700', 
               marginBottom: '20px',
               color: 'white',
-              fontFamily: 'Playfair Display, serif'
+              fontFamily: 'Poppins, sans-serif'
             }}>
-              📚 Resources
+              🌿 Resources
             </h4>
             <ul style={{ 
               listStyle: 'none', 
@@ -179,11 +179,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Writing Guide
+                  Green Writing Guide
                 </a>
               </li>
               <li style={{ marginBottom: '12px' }}>
@@ -193,11 +193,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Community Guidelines
+                  Sustainability Guidelines
                 </a>
               </li>
               <li style={{ marginBottom: '12px' }}>
@@ -207,11 +207,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Help Center
+                  Eco Help Center
                 </a>
               </li>
               <li>
@@ -221,11 +221,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Contact Support
+                  Green Support
                 </a>
               </li>
             </ul>
@@ -237,9 +237,9 @@ const Footer = () => {
               fontWeight: '700', 
               marginBottom: '20px',
               color: 'white',
-              fontFamily: 'Playfair Display, serif'
+              fontFamily: 'Poppins, sans-serif'
             }}>
-              ⚖️ Legal
+              🌍 Impact
             </h4>
             <ul style={{ 
               listStyle: 'none', 
@@ -253,11 +253,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Privacy Policy
+                  Carbon Footprint
                 </a>
               </li>
               <li style={{ marginBottom: '12px' }}>
@@ -267,11 +267,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Terms of Service
+                  Sustainability Report
                 </a>
               </li>
               <li style={{ marginBottom: '12px' }}>
@@ -281,11 +281,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Cookie Policy
+                  Green Initiatives
                 </a>
               </li>
               <li>
@@ -295,11 +295,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '15px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#667eea';
+                  e.target.style.color = '#22c55e';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  DMCA
+                  Environmental Policy
                 </a>
               </li>
             </ul>
@@ -320,7 +320,7 @@ const Footer = () => {
             margin: 0,
             fontSize: '15px'
           }}>
-            © 2025 StoryHub. All rights reserved. Made with ❤️ for storytellers everywhere.
+            © 2025 GreenBlog. All rights reserved. Made with 🌱 for a sustainable future.
           </p>
           <div style={{ 
             display: 'flex', 
@@ -332,33 +332,33 @@ const Footer = () => {
               textDecoration: 'none',
               transition: 'color 0.3s ease'
             }} onMouseOver={(e) => {
-              e.target.style.color = '#667eea';
+              e.target.style.color = '#22c55e';
             }} onMouseOut={(e) => {
               e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
-              Status
+              Green Status
             </a>
             <a href="#" style={{ 
               color: 'rgba(255, 255, 255, 0.7)', 
               textDecoration: 'none',
               transition: 'color 0.3s ease'
             }} onMouseOver={(e) => {
-              e.target.style.color = '#667eea';
+              e.target.style.color = '#22c55e';
             }} onMouseOut={(e) => {
               e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
-              Blog
+              Eco Blog
             </a>
             <a href="#" style={{ 
               color: 'rgba(255, 255, 255, 0.7)', 
               textDecoration: 'none',
               transition: 'color 0.3s ease'
             }} onMouseOver={(e) => {
-              e.target.style.color = '#667eea';
+              e.target.style.color = '#22c55e';
             }} onMouseOut={(e) => {
               e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
-              Changelog
+              Green Updates
             </a>
           </div>
         </div>
