@@ -58,7 +58,7 @@ const PostCard = ({ post, onUpdate }) => {
         <div className="post-card-header">
           <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
             <img
-              src={post.author?.profilePicture || `https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=200`}
+              src={post.author?.profilePicture || `https://ui-avatars.com/api/?name=${post.author?.username}&background=6366f1&color=fff`}
               alt={post.author?.username}
               className="avatar avatar-md"
             />
@@ -67,9 +67,9 @@ const PostCard = ({ post, onUpdate }) => {
                 to={`/user/${post.author?.username}`}
                 style={{ 
                   textDecoration: 'none', 
-                  color: '#065f46', 
-                  fontWeight: '700',
-                  fontSize: '18px',
+                  color: '#f1f5f9', 
+                  fontWeight: '600',
+                  fontSize: '16px',
                   transition: 'color 0.3s ease'
                 }}
               >
@@ -84,7 +84,7 @@ const PostCard = ({ post, onUpdate }) => {
                 {post.status === 'draft' && (
                   <span className="badge" style={{ 
                     marginLeft: '16px', 
-                    background: 'linear-gradient(135deg, #f59e0b 0%, #d97706 100%)', 
+                    background: 'rgba(251, 191, 36, 0.2)', 
                     color: 'white',
                     fontSize: '13px',
                     padding: '8px 16px'
@@ -120,11 +120,11 @@ const PostCard = ({ post, onUpdate }) => {
         {post.image && (
           <div style={{ 
             width: '100%', 
-            height: '320px', 
+            height: '240px', 
             overflow: 'hidden', 
-            borderRadius: '24px', 
-            marginBottom: '32px',
-            boxShadow: '0 8px 30px rgba(16, 185, 129, 0.2)'
+            borderRadius: '16px', 
+            marginBottom: '24px',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
           }}>
             <img 
               src={post.image} 
@@ -133,9 +133,9 @@ const PostCard = ({ post, onUpdate }) => {
                 width: '100%', 
                 height: '100%', 
                 objectFit: 'cover',
-                transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)'
+                transition: 'transform 0.4s ease'
               }}
-              onMouseOver={(e) => e.target.style.transform = 'scale(1.1)'}
+              onMouseOver={(e) => e.target.style.transform = 'scale(1.05)'}
               onMouseOut={(e) => e.target.style.transform = 'scale(1)'}
             />
           </div>
@@ -171,8 +171,8 @@ const PostCard = ({ post, onUpdate }) => {
                 opacity: loading ? 0.6 : 1
               }}
             >
-              <span style={{ fontSize: '22px' }}>
-                {isLiked ? '💖' : '🤍'}
+              <span style={{ fontSize: '18px' }}>
+                {isLiked ? '❤️' : '🤍'}
               </span>
               <span>{likesCount}</span>
             </button>
@@ -182,17 +182,17 @@ const PostCard = ({ post, onUpdate }) => {
               className="post-action"
               style={{ textDecoration: 'none' }}
             >
-              <span style={{ fontSize: '22px' }}>💬</span>
+              <span style={{ fontSize: '18px' }}>💬</span>
               <span>{post.commentsCount || 0}</span>
             </Link>
 
             <div className="post-action">
-              <span style={{ fontSize: '22px' }}>👁️</span>
+              <span style={{ fontSize: '18px' }}>👁️</span>
               <span>{post.views || 0}</span>
             </div>
 
             <button className="post-action">
-              <span style={{ fontSize: '22px' }}>📤</span>
+              <span style={{ fontSize: '18px' }}>📤</span>
               <span>Share</span>
             </button>
           </div>
@@ -202,7 +202,7 @@ const PostCard = ({ post, onUpdate }) => {
             className="btn btn-sm btn-outline"
             style={{ textDecoration: 'none' }}
           >
-            📖 Read More
+            📖 Read
           </Link>
         </div>
       </div>

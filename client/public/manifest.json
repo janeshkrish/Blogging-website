@@ -1,6 +1,6 @@
 {
-  "short_name": "BlogSphere",
-  "name": "BlogSphere - Where Stories Come to Life",
+  "short_name": "WriteFlow",
+  "name": "WriteFlow - Where Ideas Flow Into Stories",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#10b981",
-  "background_color": "#f0fdf4"
+  "theme_color": "#6366f1",
+  "background_color": "#0f0f23"
 }

@@ -67,10 +67,10 @@ const Register = () => {
     }}>
       <div className="form-container" style={{ width: '100%', maxWidth: '550px' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <div style={{ fontSize: '80px', marginBottom: '24px' }}>🚀</div>
-          <h1 className="form-title">Join BlogSphere</h1>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}>✍️</div>
+          <h1 className="form-title">Join WriteFlow</h1>
           <p style={{ color: '#6b7280', fontSize: '18px' }}>
-            Start your creative journey and connect with millions of readers
+            Begin your writing journey and share your stories
           </p>
         </div>
 
@@ -82,7 +82,7 @@ const Register = () => {
 
         <form onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="username" className="form-label">Creator Username</label>
+            <label htmlFor="username" className="form-label">Writer Username</label>
             <input
               type="text"
               id="username"
@@ -90,7 +90,7 @@ const Register = () => {
               value={formData.username}
               onChange={handleChange}
               className="form-input"
-              placeholder="Choose your unique username"
+              placeholder="Choose your writer name"
               required
               minLength={3}
               maxLength={30}
@@ -154,7 +154,7 @@ const Register = () => {
             disabled={loading}
             style={{ width: '100%', marginBottom: '24px' }}
           >
-            {loading ? '✨ Creating your account...' : '🚀 Create Account'}
+            {loading ? '⏳ Creating account...' : '✍️ Create Account'}
           </button>
         </form>
 
@@ -164,7 +164,7 @@ const Register = () => {
             <Link 
               to="/login" 
               style={{ 
-                color: '#10b981', 
+                color: '#6366f1', 
                 textDecoration: 'none', 
                 fontWeight: '600' 
               }}
@@ -178,31 +178,31 @@ const Register = () => {
         <div style={{
           marginTop: '40px',
           padding: '32px',
-          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)',
+          background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
           borderRadius: '24px',
-          border: '2px solid rgba(16, 185, 129, 0.3)'
+          border: '1px solid rgba(99, 102, 241, 0.3)'
         }}>
           <h4 style={{ 
             fontSize: '18px', 
             fontWeight: '700', 
             marginBottom: '20px',
-            color: '#064e3b'
+            color: '#f1f5f9'
           }}>
-            🌟 What awaits you:
+            ✨ What you'll get:
           </h4>
           <ul style={{ 
             margin: 0, 
             paddingLeft: '24px', 
-            color: '#065f46',
+            color: '#cbd5e1',
             fontSize: '15px',
             lineHeight: '1.8'
           }}>
-            <li style={{ marginBottom: '8px' }}>✍️ Advanced writing tools and editor</li>
-            <li style={{ marginBottom: '8px' }}>📊 Detailed analytics and insights</li>
-            <li style={{ marginBottom: '8px' }}>💰 Monetization opportunities</li>
-            <li style={{ marginBottom: '8px' }}>🌐 Global community of creators</li>
-            <li style={{ marginBottom: '8px' }}>🔔 Real-time engagement notifications</li>
-            <li>🚀 SEO optimization and growth tools</li>
+            <li style={{ marginBottom: '8px' }}>✍️ Beautiful writing editor</li>
+            <li style={{ marginBottom: '8px' }}>📊 Story performance insights</li>
+            <li style={{ marginBottom: '8px' }}>👥 Connect with readers</li>
+            <li style={{ marginBottom: '8px' }}>🔔 Real-time notifications</li>
+            <li style={{ marginBottom: '8px' }}>📱 Mobile-friendly platform</li>
+            <li>🎨 Customizable writer profile</li>
           </ul>
         </div>
 
@@ -210,7 +210,7 @@ const Register = () => {
           textAlign: 'center', 
           marginTop: '40px', 
           paddingTop: '24px',
-          borderTop: '1px solid rgba(16, 185, 129, 0.2)'
+          borderTop: '1px solid rgba(99, 102, 241, 0.2)'
         }}>
           <Link 
             to="/"

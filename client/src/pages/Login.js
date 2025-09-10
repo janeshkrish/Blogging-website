@@ -49,10 +49,10 @@ const Login = () => {
     }}>
       <div className="form-container" style={{ width: '100%', maxWidth: '500px' }}>
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-          <div style={{ fontSize: '80px', marginBottom: '24px' }}>✨</div>
-          <h1 className="form-title">Welcome Back Creator</h1>
+          <div style={{ fontSize: '64px', marginBottom: '20px' }}>🔐</div>
+          <h1 className="form-title">Welcome Back Writer</h1>
           <p style={{ color: '#6b7280', fontSize: '18px' }}>
-            Sign in to continue your storytelling journey
+            Continue your storytelling journey
           </p>
         </div>
 
@@ -99,22 +99,22 @@ const Login = () => {
             disabled={loading}
             style={{ width: '100%', marginBottom: '24px' }}
           >
-            {loading ? '✨ Signing you in...' : '🚀 Sign In'}
+            {loading ? '⏳ Signing in...' : '🔐 Sign In'}
           </button>
         </form>
 
         <div style={{ textAlign: 'center' }}>
           <p style={{ color: '#6b7280', marginBottom: '20px' }}>
-            New to BlogSphere?{' '}
+            New to WriteFlow?{' '}
             <Link 
               to="/register" 
               style={{ 
-                color: '#10b981', 
+                color: '#6366f1', 
                 textDecoration: 'none', 
                 fontWeight: '600' 
               }}
             >
-              Join our community
+              Create account
             </Link>
           </p>
         </div>
@@ -123,27 +123,27 @@ const Login = () => {
         <div style={{
           marginTop: '40px',
           padding: '28px',
-          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%)',
+          background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%)',
           borderRadius: '20px',
-          border: '2px solid rgba(16, 185, 129, 0.2)'
+          border: '1px solid rgba(99, 102, 241, 0.3)'
         }}>
           <h4 style={{ 
             fontSize: '16px', 
             fontWeight: '700', 
             marginBottom: '16px',
-            color: '#064e3b'
+            color: '#f1f5f9'
           }}>
-            🎭 Try Demo Accounts
+            🎭 Demo Accounts
           </h4>
-          <div style={{ fontSize: '14px', color: '#065f46', lineHeight: '1.6' }}>
+          <div style={{ fontSize: '14px', color: '#cbd5e1', lineHeight: '1.6' }}>
             <p style={{ marginBottom: '12px' }}>
-              <strong>Admin:</strong> admin@blogsphere.com / admin123
+              <strong>Admin:</strong> admin@writeflow.com / admin123
             </p>
             <p style={{ marginBottom: '12px' }}>
-              <strong>Creator:</strong> alex@example.com / password123
+              <strong>Writer:</strong> alex@example.com / password123
             </p>
             <p style={{ margin: 0, fontSize: '13px', fontStyle: 'italic' }}>
-              Explore all features with these pre-configured accounts
+              Try all features with these demo accounts
             </p>
           </div>
         </div>
@@ -152,7 +152,7 @@ const Login = () => {
           textAlign: 'center', 
           marginTop: '40px', 
           paddingTop: '24px',
-          borderTop: '1px solid rgba(16, 185, 129, 0.2)'
+          borderTop: '1px solid rgba(99, 102, 241, 0.2)'
         }}>
           <Link 
             to="/"

@@ -20,23 +20,23 @@ const Footer = () => {
               fontSize: '32px', 
               fontWeight: '800',
               marginBottom: '24px',
-              background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+              background: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              fontFamily: 'Inter, sans-serif'
+              fontFamily: 'Space Grotesk, sans-serif'
             }}>
-              ✨ BlogSphere
+              WriteFlow
             </h3>
             <p style={{ 
               color: 'rgba(255, 255, 255, 0.8)', 
               lineHeight: '1.8',
               marginBottom: '28px',
               fontSize: '16px',
-              fontFamily: 'Crimson Text, serif'
+              fontFamily: 'Merriweather, serif'
             }}>
-              The ultimate platform for creative minds, thought leaders, and storytellers. 
-              Share your ideas, connect with readers, and build your digital presence.
+              Where ideas flow into stories. The modern platform for writers, creators, 
+              and storytellers to share their voice with the world.
             </p>
             <div style={{ display: 'flex', gap: '24px' }}>
               <a href="#" style={{ 
@@ -96,9 +96,9 @@ const Footer = () => {
               fontWeight: '700', 
               marginBottom: '24px',
               color: 'white',
-              fontFamily: 'Inter, sans-serif'
+              fontFamily: 'Space Grotesk, sans-serif'
             }}>
-              ✨ Platform
+              🚀 Platform
             </h4>
             <ul style={{ 
               listStyle: 'none', 
@@ -112,11 +112,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Creative Writing Tools
+                  Advanced Editor
                 </a>
               </li>
               <li style={{ marginBottom: '14px' }}>
@@ -126,11 +126,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Advanced Analytics
+                  Story Analytics
                 </a>
               </li>
               <li style={{ marginBottom: '14px' }}>
@@ -140,11 +140,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Community Hub
+                  Reader Community
                 </a>
               </li>
               <li>
@@ -154,11 +154,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Publishing Guidelines
+                  Publishing Tools
                 </a>
               </li>
             </ul>
@@ -170,9 +170,9 @@ const Footer = () => {
               fontWeight: '700', 
               marginBottom: '24px',
               color: 'white',
-              fontFamily: 'Inter, sans-serif'
+              fontFamily: 'Space Grotesk, sans-serif'
             }}>
-              📚 Resources
+              📚 Learn
             </h4>
             <ul style={{ 
               listStyle: 'none', 
@@ -186,11 +186,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Writing Masterclass
+                  Writing Academy
                 </a>
               </li>
               <li style={{ marginBottom: '14px' }}>
@@ -200,11 +200,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Content Strategy
+                  Story Craft
                 </a>
               </li>
               <li style={{ marginBottom: '14px' }}>
@@ -214,11 +214,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Creator Support
+                  Writer Support
                 </a>
               </li>
               <li>
@@ -228,11 +228,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  API Documentation
+                  Developer API
                 </a>
               </li>
             </ul>
@@ -244,9 +244,9 @@ const Footer = () => {
               fontWeight: '700', 
               marginBottom: '24px',
               color: 'white',
-              fontFamily: 'Inter, sans-serif'
+              fontFamily: 'Space Grotesk, sans-serif'
             }}>
-              🚀 Growth
+              💡 Grow
             </h4>
             <ul style={{ 
               listStyle: 'none', 
@@ -260,11 +260,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Audience Building
+                  Build Audience
                 </a>
               </li>
               <li style={{ marginBottom: '14px' }}>
@@ -274,11 +274,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Monetization
+                  Earn Revenue
                 </a>
               </li>
               <li style={{ marginBottom: '14px' }}>
@@ -288,11 +288,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  SEO Optimization
+                  Story Discovery
                 </a>
               </li>
               <li>
@@ -302,11 +302,11 @@ const Footer = () => {
                   transition: 'color 0.3s ease',
                   fontSize: '16px'
                 }} onMouseOver={(e) => {
-                  e.target.style.color = '#10b981';
+                  e.target.style.color = '#a5b4fc';
                 }} onMouseOut={(e) => {
                   e.target.style.color = 'rgba(255, 255, 255, 0.8)';
                 }}>
-                  Premium Features
+                  Pro Features
                 </a>
               </li>
             </ul>
@@ -327,7 +327,7 @@ const Footer = () => {
             margin: 0,
             fontSize: '16px'
           }}>
-            © 2025 BlogSphere. All rights reserved. Crafted with ✨ for creators worldwide.
+            © 2025 WriteFlow. All rights reserved. Crafted with 💜 for storytellers worldwide.
           </p>
           <div style={{ 
             display: 'flex', 
@@ -339,7 +339,7 @@ const Footer = () => {
               textDecoration: 'none',
               transition: 'color 0.3s ease'
             }} onMouseOver={(e) => {
-              e.target.style.color = '#10b981';
+              e.target.style.color = '#a5b4fc';
             }} onMouseOut={(e) => {
               e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
@@ -350,7 +350,7 @@ const Footer = () => {
               textDecoration: 'none',
               transition: 'color 0.3s ease'
             }} onMouseOver={(e) => {
-              e.target.style.color = '#10b981';
+              e.target.style.color = '#a5b4fc';
             }} onMouseOut={(e) => {
               e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
@@ -361,11 +361,11 @@ const Footer = () => {
               textDecoration: 'none',
               transition: 'color 0.3s ease'
             }} onMouseOver={(e) => {
-              e.target.style.color = '#10b981';
+              e.target.style.color = '#a5b4fc';
             }} onMouseOut={(e) => {
               e.target.style.color = 'rgba(255, 255, 255, 0.7)';
             }}>
-              Creator Program
+              Writer Program
             </a>
           </div>
         </div>
